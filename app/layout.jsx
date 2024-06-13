@@ -10,6 +10,8 @@ import "react-modal-video/css/modal-video.css";
 // import BidModal from "@/components/modals/BidModal";
 // import PropertiesModal from "@/components/modals/PropertiesModal";
 // import LevelsModal from "@/components/modals/LevelsModal";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import ModeChanger from "@/components/common/ModeChanger";
 if (typeof window !== "undefined") {
   // Import the script only on the client side
@@ -36,7 +38,7 @@ const config = getDefaultConfig({
     appName: 'COM',
     projectId: 'da4d656687b6cf5ac567d474ea10f0f5',
     chains: [sepolia],
-    ssr: true, // If your dApp uses server side rendering (SSR)
+    // ssr: true, // If your dApp uses server side rendering (SSR)
 });
 
 const queryClient = new QueryClient();
@@ -51,6 +53,7 @@ export default function RootLayout({ children }) {
           "overflow-x-hidden font-body text-jacarta-500 dark:bg-jacarta-900"
         }
       >
+      <ToastContainer />
         <ModeChanger />
         <WagmiProvider config={config}>
             <QueryClientProvider client={queryClient}>

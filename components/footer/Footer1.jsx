@@ -63,6 +63,7 @@ export default function Footer1() {
           <span className="text-sm dark:text-jacarta-400">
             &copy; {new Date().getFullYear()} COM — Made by{" "}
             <a
+                target='_blank'
               href="https://www.metaborong.com/"
               className="hover:text-accent"
             >

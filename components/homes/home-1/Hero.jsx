@@ -1,29 +1,66 @@
 'use client';
 /* eslint-disable react/no-unescaped-entities */
 
+import React, {useEffect} from "react";
 import Image from "next/image";
-import Link from "next/link";
-import {useAccount } from 'wagmi';
-import {mintTokens} from "@/contractInteraction/mintTokens";
-
+import {useAccount, useWriteContract, useWaitForTransactionReceipt} from 'wagmi';
+import {contractConfig} from "@/contractInteraction/contractConfig";
+import abi from '@/contractInteraction/abi.json';
+import configs from "@/config.json";
+import {toast, Slide} from "react-toastify";
 
 export default function Hero() {
-    const {address,isConnected,chainId} = useAccount();
+    const {address, isConnected} = useAccount();
+    const {writeContract, data: hash, error, isPending} = useWriteContract({contractConfig})
+    const {isLoading, isSuccess, isError, data: hashResponse} = useWaitForTransactionReceipt({
+        hash: hash,
+    });
 
     const handleMint = async () => {
 
         if (!isConnected) {
             return;
         }
-        console.log('$$$$$$$')
-        try {
-            const res = await mintTokens(address, chainId,"1");
-            console.log('res--',res)
-        } catch (error) {
-            console.log('error--', error)
-        }
+
+        writeContract({
+            abi,
+            address: configs.contractAddress,
+            functionName: 'mint',
+            args: [
+                address,
+                "1",
+            ],
+        })
 
     };
+
+    const toastOptions = {
+        position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: false,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+        transition: Slide,
+    }
+
+    useEffect(() => {
+        if (isPending || isLoading) {
+            console.log('Processing...')
+        } else {
+            if (error) {
+                toast(error.shortMessage, toastOptions);
+                console.log(error.shortMessage)
+            } else if (isSuccess && hashResponse) {
+                toast('Transaction Successful.', toastOptions);
+                console.log('Transaction Successful')
+            } else if (isError) {
+                toast('Something went wrong.', toastOptions);
+                console.log('Something went wrong')
+            }
+        }
+    }, [isPending, isLoading])
 
     return (
         <section className="relative pb-10 pt-20 md:pt-32 ">
@@ -59,10 +96,11 @@ export default function Hero() {
                         </p>
                         <div className="flex space-x-4">
                             <button
+                                disabled={isPending || isLoading}
                                 onClick={handleMint}
-                                className="w-36 rounded-full bg-accent py-3 px-8 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark"
+                                className="w-36 rounded-full bg-accent py-3 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark disabled:opacity-0.7 disabled:pointer-events-none"
                             >
-                                Mint
+                                {(isPending || isLoading) ? 'Processing...' : 'Mint'}
                             </button>
                             {/*<Link*/}
                             {/*  href="/collections"*/}
