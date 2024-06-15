@@ -19,6 +19,7 @@ export default function Hero() {
     const handleMint = async () => {
 
         if (!isConnected) {
+            toast('Please connect your wallet.', toastOptions);
             return;
         }
 
@@ -32,6 +33,15 @@ export default function Hero() {
             ],
         })
 
+    };
+
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = '/com.zip'; // Path to your ZIP file in the public directory
+        link.download = 'com.zip'; // The name for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     };
 
     const toastOptions = {
@@ -86,28 +96,27 @@ export default function Hero() {
             <div className="container h-full">
                 <div className="grid h-full items-center gap-4 md:grid-cols-12">
                     <div
-                        className="col-span-6 flex h-full flex-col items-center justify-center py-10 md:items-start md:py-20 xl:col-span-4">
-                        <h1 className="mb-6 text-center font-display text-5xl text-jacarta-700 dark:text-white md:text-left lg:text-6xl xl:text-7xl">
-                            Mint NFTs.
+                        className="col-span-6 flex h-full flex-col items-center justify-center py-10 md:items-start md:pb-12 xl:col-span-4">
+                        <h1 className="mb-4 text-center font-display text-3xl text-[#03b56a] md:text-left lg:text-4xl xl:text-5xl">
+                            Evolving Digital IP, Democratized
                         </h1>
-                        <p className="mb-8 text-center text-lg dark:text-jacarta-200 md:text-left">
-                            The world's largest digital marketplace for crypto collectibles
-                            and non-fungible tokens
+                        <p className="mb-8 text-center text-md dark:text-jacarta-200 md:text-left">
+                            Redefine ownership through AI-driven Creative Object Models.
                         </p>
                         <div className="flex space-x-4">
                             <button
                                 disabled={isPending || isLoading}
                                 onClick={handleMint}
-                                className="w-36 rounded-full bg-accent py-3 px-6 text-center font-semibold text-white shadow-accent-volume transition-all hover:bg-accent-dark disabled:opacity-0.7 disabled:pointer-events-none"
+                                className="w-36 rounded-full bg-[#03b56a] py-3 px-6 text-center font-semibold text-white  transition-all hover:bg-[#029e57] disabled:opacity-0.7 disabled:pointer-events-none"
                             >
-                                {(isPending || isLoading) ? 'Processing...' : 'Mint'}
+                                {(isPending || isLoading) ? 'Processing...' : 'Go ahead'}
                             </button>
-                            {/*<Link*/}
-                            {/*  href="/collections"*/}
-                            {/*  className=" rtl:!mr-6 w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-accent shadow-white-volume transition-all hover:bg-accent-dark hover:text-white hover:shadow-accent-volume"*/}
-                            {/*>*/}
-                            {/*  Explore*/}
-                            {/*</Link>*/}
+                            <button
+                                onClick={handleDownload}
+                              className=" rtl:!mr-6 w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-[#03b56a] shadow-white-volume hover:shadow-none transition-all hover:bg-[#029e57] hover:text-white"
+                            >
+                              Download
+                            </button>
                         </div>
                     </div>
 

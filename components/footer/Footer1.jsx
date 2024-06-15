@@ -59,29 +59,29 @@ export default function Footer1() {
         {/*    </ul>*/}
         {/*  </div>*/}
         {/*</div>*/}
-        <div className="flex flex-col items-center justify-between space-y-2 py-8 sm:flex-row sm:space-y-0">
+        <div className="flex flex-col items-center justify-center space-y-2 py-8 sm:flex-row sm:space-y-0">
           <span className="text-sm dark:text-jacarta-400">
             &copy; {new Date().getFullYear()} COM — Made by{" "}
             <a
                 target='_blank'
-              href="https://www.metaborong.com/"
+              href="https://www.createprotocol.org/"
               className="hover:text-accent"
             >
-              metaborong
+              createprotocol
             </a>
           </span>
-          <ul className="flex flex-wrap space-x-4 text-sm dark:text-jacarta-400">
-            <li>
-              <a href="#" className="hover:text-accent">
-                Terms and conditions
-              </a>
-            </li>
-            <li>
-              <a href="#" className="hover:text-accent">
-                Privacy policy
-              </a>
-            </li>
-          </ul>
+          {/*<ul className="flex flex-wrap space-x-4 text-sm dark:text-jacarta-400">*/}
+          {/*  <li>*/}
+          {/*    <a href="#" className="hover:text-accent">*/}
+          {/*      Terms and conditions*/}
+          {/*    </a>*/}
+          {/*  </li>*/}
+          {/*  <li>*/}
+          {/*    <a href="#" className="hover:text-accent">*/}
+          {/*      Privacy policy*/}
+          {/*    </a>*/}
+          {/*  </li>*/}
+          {/*</ul>*/}
         </div>
       </div>
     </footer>

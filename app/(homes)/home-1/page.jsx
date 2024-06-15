@@ -12,7 +12,7 @@ export default function HomePage1() {
       <main>
         <Hero />
       </main>
-      <Footer1 />
+      {/*<Footer1 />*/}
     </>
   );
 }
