@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useEffect, useState } from "react";
-// import Nav from "./component/Nav";
+import Nav from "./component/Nav";
 import {
   addMobileMenuToggle,
   removeMenuActive,
@@ -38,7 +38,7 @@ export default function Header1() {
   return (
     <>
       <header
-        className={`js-page-header fixed top-0 z-20 w-full backdrop-blur transition-colors ${
+        className={`js-page-header fixed top-0 z-30 w-full backdrop-blur transition-colors ${
           scrolled ? "js-page-header--is-sticky" : ""
         }`}
       >
@@ -88,30 +88,31 @@ export default function Header1() {
           {/*</form>*/}
 
           {/* Menu / Actions */}
-          <div className="js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto rtl:mr-auto rtl:ml-0 items-center bg-white opacity-0 dark:bg-jacarta-800 lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent ">
+          <div className="flex-1 js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto rtl:mr-auto rtl:ml-0 lg:justify-end items-center bg-white opacity-0 dark:bg-jacarta-800 lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent ">
             {/* Mobile Logo / Menu Close */}
             <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
               {/* Mobile Logo */}
-              <Link href="/" className="shrink-0">
-                <Image
-                  width={130}
-                  height={28}
-                  src="/img/logo.png"
-                  className="max-h-7 dark:hidden"
-                  alt="Xhibiter | NFT Marketplace"
-                />
-                <Image
-                  width={130}
-                  height={28}
-                  src="/img/logo_white.png"
-                  className="hidden max-h-7 dark:block"
-                  alt="Xhibiter | NFT Marketplace"
-                />
+              <Link href="/" className="font-display text-2xl text-jacarta-700 dark:text-white lg:text-3xl xl:text-4xl h-fit">
+              COM
+               {/*<Image*/}
+                {/*  width={130}*/}
+                {/*  height={28}*/}
+                {/*  src="/img/logo.png"*/}
+                {/*  className="max-h-7 dark:hidden"*/}
+                {/*  alt="Xhibiter | NFT Marketplace"*/}
+                {/*/>*/}
+                {/*<Image*/}
+                {/*  width={130}*/}
+                {/*  height={28}*/}
+                {/*  src="/img/logo_white.png"*/}
+                {/*  className="hidden max-h-7 dark:block"*/}
+                {/*  alt="Xhibiter | NFT Marketplace"*/}
+                {/*/>*/}
               </Link>
 
               {/* Mobile Menu Close */}
               <button
-                className="js-mobile-close group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                className="js-mobile-close group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-[#03b56a] focus:border-transparent focus:bg-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:hover:bg-[#03b56a]"
                 aria-label="close mobile menu"
               >
                 <svg
@@ -152,14 +153,14 @@ export default function Header1() {
             {/*</form>*/}
 
             {/* Primary Nav */}
-            {/*<nav className="navbar w-full">*/}
-            {/*  <ul className="flex flex-col lg:flex-row">*/}
-            {/*    <Nav />*/}
-            {/*  </ul>*/}
-            {/*</nav>*/}
+            <nav className="navbar mt-24 lg:mt-0">
+              <ul className="flex flex-col lg:flex-row">
+                <Nav />
+              </ul>
+            </nav>
 
             {/* Mobile Connect Wallet / Socials */}
-            <div className="mt-24 w-full lg:hidden">
+            <div className=" w-full lg:hidden mt-4">
               <ConnectButton />
 
               <hr className="my-5 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
@@ -250,7 +251,7 @@ export default function Header1() {
               {/* Dark Mode */}
               <div
                 onClick={() => handleDarkMode()}
-                className="cursor-pointer  js-dark-mode-trigger  group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+                className="cursor-pointer  js-dark-mode-trigger  group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-[#03b56a] focus:border-transparent focus:bg-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:hover:bg-[#03b56a]"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -299,7 +300,7 @@ export default function Header1() {
             {/* Dark Mode */}
             <div
               onClick={() => handleDarkMode()}
-              className="cursor-pointer js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+              className="cursor-pointer js-dark-mode-trigger group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-[#03b56a] focus:border-transparent focus:bg-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:hover:bg-[#03b56a]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -325,7 +326,7 @@ export default function Header1() {
 
             {/* Mobile Menu Toggle */}
             <button
-              className="js-mobile-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-accent focus:border-transparent focus:bg-accent dark:border-transparent dark:bg-white/[.15] dark:hover:bg-accent"
+              className="js-mobile-toggle group ml-2 flex h-10 w-10 items-center justify-center rounded-full border border-jacarta-100 bg-white transition-colors hover:border-transparent hover:bg-[#03b56a] focus:border-transparent focus:bg-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:hover:bg-[#03b56a]"
               aria-label="open mobile menu"
             >
               <svg
