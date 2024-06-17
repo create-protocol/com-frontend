@@ -238,7 +238,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.creatorAvatar}
                                 alt="creator"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Creator: Sussygirl"
                               />
                             </a>
@@ -248,7 +248,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.ownerAvatar}
                                 alt="owner"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Owner: Sussygirl"
                               />
                             </a>
@@ -257,7 +257,7 @@ export default function Collcetions() {
                       </figure>
                       <div className="mt-7 flex items-center justify-between">
                         <Link href={`/explore/${elm.id}`}>
-                          <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
+                          <span className="font-display text-base text-jacarta-700 hover:text-[#03b56a] dark:text-white">
                             {elm.title}
                           </span>
                         </Link>
@@ -314,7 +314,7 @@ export default function Collcetions() {
 
                       <div className="mt-8 flex items-center justify-between">
                         <button
-                          className="font-display text-sm font-semibold text-accent"
+                          className="font-display text-sm font-semibold text-[#03b56a]"
                           data-bs-toggle="modal"
                           data-bs-target="#buyNowModal"
                         >
@@ -329,12 +329,12 @@ export default function Collcetions() {
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
-                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-accent dark:fill-jacarta-200"
+                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-[#03b56a] dark:fill-jacarta-200"
                           >
                             <path fill="none" d="M0 0H24V24H0z" />
                             <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z" />
                           </svg>
-                          <span className="font-display text-sm font-semibold group-hover:text-accent dark:text-jacarta-200">
+                          <span className="font-display text-sm font-semibold group-hover:text-[#03b56a] dark:text-jacarta-200">
                             View History
                           </span>
                         </Link>
@@ -407,7 +407,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.creatorAvatar}
                                 alt="creator"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Creator: Sussygirl"
                               />
                             </a>
@@ -417,7 +417,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.ownerAvatar}
                                 alt="owner"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Owner: Sussygirl"
                               />
                             </a>
@@ -426,7 +426,7 @@ export default function Collcetions() {
                       </figure>
                       <div className="mt-7 flex items-center justify-between">
                         <Link href={`/explore/${elm.id}`}>
-                          <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
+                          <span className="font-display text-base text-jacarta-700 hover:text-[#03b56a] dark:text-white">
                             {elm.title}
                           </span>
                         </Link>
@@ -483,7 +483,7 @@ export default function Collcetions() {
 
                       <div className="mt-8 flex items-center justify-between">
                         <button
-                          className="font-display text-sm font-semibold text-accent"
+                          className="font-display text-sm font-semibold text-[#03b56a]"
                           data-bs-toggle="modal"
                           data-bs-target="#buyNowModal"
                         >
@@ -498,12 +498,12 @@ export default function Collcetions() {
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
-                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-accent dark:fill-jacarta-200"
+                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-[#03b56a] dark:fill-jacarta-200"
                           >
                             <path fill="none" d="M0 0H24V24H0z" />
                             <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z" />
                           </svg>
-                          <span className="font-display text-sm font-semibold group-hover:text-accent dark:text-jacarta-200">
+                          <span className="font-display text-sm font-semibold group-hover:text-[#03b56a] dark:text-jacarta-200">
                             View History
                           </span>
                         </Link>
@@ -576,7 +576,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.creatorAvatar}
                                 alt="creator"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Creator: Sussygirl"
                               />
                             </a>
@@ -586,7 +586,7 @@ export default function Collcetions() {
                                 height={24}
                                 src={elm.ownerAvatar}
                                 alt="owner"
-                                className="h-6 w-6 rounded-full border-2 border-white hover:border-accent dark:border-jacarta-600 dark:hover:border-accent"
+                                className="h-6 w-6 rounded-full border-2 border-white hover:border-[#03b56a] dark:border-jacarta-600 dark:hover:border-[#03b56a]"
                                 data-tippy-content="Owner: Sussygirl"
                               />
                             </a>
@@ -595,7 +595,7 @@ export default function Collcetions() {
                       </figure>
                       <div className="mt-7 flex items-center justify-between">
                         <Link href={`/explore/${elm.id}`}>
-                          <span className="font-display text-base text-jacarta-700 hover:text-accent dark:text-white">
+                          <span className="font-display text-base text-jacarta-700 hover:text-[#03b56a] dark:text-white">
                             {elm.title}
                           </span>
                         </Link>
@@ -652,7 +652,7 @@ export default function Collcetions() {
 
                       <div className="mt-8 flex items-center justify-between">
                         <button
-                          className="font-display text-sm font-semibold text-accent"
+                          className="font-display text-sm font-semibold text-[#03b56a]"
                           data-bs-toggle="modal"
                           data-bs-target="#buyNowModal"
                         >
@@ -667,12 +667,12 @@ export default function Collcetions() {
                             viewBox="0 0 24 24"
                             width="24"
                             height="24"
-                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-accent dark:fill-jacarta-200"
+                            className="mr-1 mb-[3px] h-4 w-4 fill-jacarta-500 group-hover:fill-[#03b56a] dark:fill-jacarta-200"
                           >
                             <path fill="none" d="M0 0H24V24H0z" />
                             <path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12h2c0 4.418 3.582 8 8 8s8-3.582 8-8-3.582-8-8-8C9.25 4 6.824 5.387 5.385 7.5H8v2H2v-6h2V6c1.824-2.43 4.729-4 8-4zm1 5v4.585l3.243 3.243-1.415 1.415L11 12.413V7h2z" />
                           </svg>
-                          <span className="font-display text-sm font-semibold group-hover:text-accent dark:text-jacarta-200">
+                          <span className="font-display text-sm font-semibold group-hover:text-[#03b56a] dark:text-jacarta-200">
                             View History
                           </span>
                         </Link>

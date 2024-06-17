@@ -102,7 +102,7 @@ export default function Activity() {
         >
           <input
             type="search"
-            className="w-full rounded-2xl border border-jacarta-100 py-[0.6875rem] px-4 pl-10 text-jacarta-700 placeholder-jacarta-500 focus:ring-accent dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
+            className="w-full rounded-2xl border border-jacarta-100 py-[0.6875rem] px-4 pl-10 text-jacarta-700 placeholder-jacarta-500 focus:ring-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
             placeholder="Search"
           />
           <button
@@ -130,9 +130,9 @@ export default function Activity() {
             onClick={() => setCurrentCategory()}
             className={`  ${
               !currentCategory
-                ? " border-transparent !bg-accent text-white"
+                ? " border-transparent !bg-[#03b56a] text-white"
                 : ""
-            }  group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent`}
+            }  group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a]`}
           >
             <span className="text-2xs font-medium">All</span>
           </button>
@@ -142,9 +142,9 @@ export default function Activity() {
               key={i}
               className={` ${
                 currentCategory == elm.label
-                  ? " border-transparent !bg-accent text-white"
+                  ? " border-transparent !bg-[#03b56a] text-white"
                   : ""
-              } group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-accent hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-accent`}
+              } group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a]`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
