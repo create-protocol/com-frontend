@@ -322,8 +322,8 @@ export default function ItemDetails({id}) {
                             <div className='h-full border border-solid border-jacarta-300 rounded-lg p-4'>
                                 <h2 className='text-md font-medium block text-[#03b56a] mb-4'>comments</h2>
                                 <div className='h-full max-h-72 overflow-y-auto'>
-                                    {comments.map((elm) => (
-                                        <div className='ml-2 mb-2 flex flex-col items-start gap-0'>
+                                    {comments.map((elm,i) => (
+                                        <div key={i} className='ml-2 mb-2 flex flex-col items-start gap-0'>
                                             <p className="font-display text-sm text-jacarta-700 dark:text-white">
                                                 {elm.userName}
                                             </p>
