@@ -13,7 +13,7 @@ export default function CreatePage() {
       <main>
         <Create />
       </main>
-      {/*<Footer1 />*/}
+      <Footer1 />
     </>
   );
 }

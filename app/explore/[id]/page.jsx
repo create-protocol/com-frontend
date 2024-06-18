@@ -13,7 +13,7 @@ export default function ItemDetailsPage({ params }) {
       <main className="mt-24">
         <ItemDetails id={params.id} />
       </main>
-      {/*<Footer1 />*/}
+      <Footer1 />
     </>
   );
 }

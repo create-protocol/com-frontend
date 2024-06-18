@@ -17,7 +17,7 @@ export default function UserPage() {
                 <History />
                 <Ranking />
             </main>
-            {/*<Footer1 />*/}
+            <Footer1 />
         </>
     );
 }

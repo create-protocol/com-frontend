@@ -26,7 +26,7 @@ export default function HomePage10() {
         {/*<Cta />*/}
         <Help />
       </main>
-      {/*<Footer1 />*/}
+      <Footer1 />
     </>
   );
 }

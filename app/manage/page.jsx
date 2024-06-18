@@ -17,7 +17,7 @@ export default function UserPage() {
         {/*<Profile />*/}
         <Collcetions />
       </main>
-      {/*<Footer1 />*/}
+      <Footer1 />
     </>
   );
 }

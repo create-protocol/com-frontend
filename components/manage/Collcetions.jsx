@@ -12,7 +12,7 @@ import {useAccount} from "wagmi";
 
 export default function Collcetions() {
   const [allItems, setAllItems] = useState(useritems);
-  const {isConnected} = useAccount()
+  const {isConnected,account,isConnecting,isReconnecting} = useAccount()
   useEffect(() => {
     tippy("[data-tippy-content]");
   }, []);
@@ -32,6 +32,8 @@ export default function Collcetions() {
       setAllItems(items);
     }
   };
+
+  // console.log('isReconnecting--',isReconnecting,isConnected,isConnecting,account)
   return (
     <section className="relative py-24 pt-20">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
@@ -777,8 +779,8 @@ export default function Collcetions() {
                 </div>
                 {/* end activity tab */}
               </div>
-            </>:
-          <p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
+            </>
+            :<p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
         }
 
       </div>

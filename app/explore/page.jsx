@@ -13,7 +13,7 @@ export default function ExplorePage() {
       <main>
         <Collections />
       </main>
-      {/*<Footer1 />*/}
+      <Footer1 />
     </>
   );
 }
