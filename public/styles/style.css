@@ -238,7 +238,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 /* Tabs */
 .nav-link.active {
-  @apply text-jacarta-700 after:absolute after:inset-x-0 after:-bottom-px after:block after:h-[2px] after:w-full after:bg-accent dark:text-white dark:hover:text-white;
+  @apply text-jacarta-700 after:absolute after:inset-x-0 after:-bottom-px after:block after:h-[2px] after:w-full after:bg-[#03b56a] dark:text-white dark:hover:text-white;
 }
 
 .nav-link--style-2.active {

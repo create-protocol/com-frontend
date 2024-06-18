@@ -4,7 +4,7 @@ import Hero from "@/components/homes/home-1/Hero";
 // import Cta from "@/components/homes/home-1/Cta";
 
 export const metadata = {
-  title: "Home 1 || Xhibiter | NFT Marketplace Nextjs Template",
+  title: "Home",
 };
 export default function HomePage1() {
   return (

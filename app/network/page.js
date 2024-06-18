@@ -1,6 +1,6 @@
 import Footer1 from "@/components/footer/Footer1";
 import Header1 from "@/components/headers/Header1";
-import History from "@/components/collections/History";
+import History from "@/components/network/History";
 import Ranking from "@/components/Ranking";
 
 export const metadata = {

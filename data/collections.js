@@ -131,7 +131,7 @@ export const collections3 = [
   {
     id: 18,
     name: "PankySkal",
-    category: "Collectibles",
+    category: "COMs",
     images: [
       "/img/explore/collection_2_1.jpg",
       "/img/explore/collection_2_2.jpg",
@@ -159,7 +159,7 @@ export const collections3 = [
   {
     id: 20,
     name: "Metasmorf",
-    category: "Collectibles",
+    category: "COMs",
     images: [
       "/img/explore/collection_4_1.jpg",
       "/img/explore/collection_4_2.jpg",
@@ -173,7 +173,7 @@ export const collections3 = [
   {
     id: 21,
     name: "3Landers",
-    category: "Domain",
+    category: "COMs",
     images: [
       "/img/explore/collection_5_1.jpg",
       "/img/explore/collection_5_2.jpg",
@@ -186,7 +186,7 @@ export const collections3 = [
   },
   {
     id: 22,
-    category: "Music",
+    category: "COMs",
     images: [
       "/img/explore/collection_6_1.jpg",
       "/img/explore/collection_6_2.jpg",
@@ -200,7 +200,7 @@ export const collections3 = [
   },
   {
     id: 23,
-    category: "Photography",
+    category: "COMs",
     images: [
       "/img/explore/collection_7_1.jpg",
       "/img/explore/collection_7_2.jpg",
@@ -214,7 +214,7 @@ export const collections3 = [
   },
   {
     id: 24,
-    category: "Virtual World",
+    category: "COMs",
     images: [
       "/img/explore/collection_8_1.jpg",
       "/img/explore/collection_8_2.jpg",

@@ -2,7 +2,7 @@ import Offers from "./Offers";
 import Properties from "./Properties";
 import Details from "./DetailsTab";
 import Activity from "./Activity";
-import History from "./History";
+import ItemHistory from "./ItemHistory";
 
 export default function Tabs() {
   return (
@@ -199,7 +199,7 @@ export default function Tabs() {
             role="tabpanel"
             aria-labelledby="price-history-tab"
           >
-            <History />
+            <ItemHistory />
           </div>
         </div>
         {/* end tab content */}
