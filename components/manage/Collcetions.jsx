@@ -47,8 +47,11 @@ export default function Collcetions() {
       </picture>
       <div className="container">
         {/* Tabs Nav */}
-        {isConnected?
-            <>
+        {(isConnecting || isReconnecting)
+            ?<></>
+            : !isConnected
+                ?<p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
+           : <>
               <ul
                   className="nav nav-tabs scrollbar-custom mb-12 flex items-center justify-start overflow-x-auto overflow-y-hidden border-b border-jacarta-100 pb-px dark:border-jacarta-600 md:justify-center"
                   role="tablist"
@@ -780,9 +783,7 @@ export default function Collcetions() {
                 {/* end activity tab */}
               </div>
             </>
-            :<p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
         }
-
       </div>
     </section>
   );

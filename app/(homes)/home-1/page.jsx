@@ -7,6 +7,7 @@ import Faq from "@/components/homes/home-1/Faq";
 import Hero1 from "@/components/homes/home-1/Hero1";
 import Partners2 from "@/components/homes/home-1/Partners2";
 import Hero2 from "@/components/homes/home-1/Hero2";
+import Cta from "@/components/homes/home-1/Cta";
 
 export const metadata = {
   title: "Home",
@@ -24,7 +25,7 @@ export default function HomePage1() {
           {/*<Intro />*/}
           <Faq />
           <Partners2 />
-          {/*<Cta />*/}
+          <Cta />
       </main>
       <Footer1 />
     </>
