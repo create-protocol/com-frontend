@@ -9,12 +9,12 @@ export default function ItemDetails({id}) {
 
     const comments = [
         {
-            userImgSrc: "/img/avatars/avatar_22_rounded.jpg",
+            userImgSrc: "/img/user-avatar.webp",
             userName: "MadeByM1KE",
             comment: 'Every detail of this item has been meticulously crafted to perfection'
         },
         {
-            userImgSrc: "/img/avatars/avatar_22_rounded.jpg",
+            userImgSrc: "/img/user-avatar.webp",
             userName: "051_Hart",
             comment: 'This piece is more than just an object; it\'s an experience waiting to be discovered'
         },
@@ -39,7 +39,7 @@ export default function ItemDetails({id}) {
                             <Image
                                 width={540}
                                 height={670}
-                                src={"/img/item_single_large.jpg"}
+                                src={"/img/item_13_lg.gif"}
                                 alt="item"
                                 className="rounded-2.5xl w-[100%]"
                                 // data-bs-toggle="modal"
@@ -245,7 +245,7 @@ export default function ItemDetails({id}) {
                                             <Image
                                                 width={48}
                                                 height={48}
-                                                src="/img/avatars/avatar_7.jpg"
+                                                src="/img/user-avatar.webp"
                                                 alt="avatar 7"
                                                 className="rounded-2lg relative block"
                                                 loading="lazy"
@@ -284,7 +284,7 @@ export default function ItemDetails({id}) {
                                             <Image
                                                 width={48}
                                                 height={48}
-                                                src="/img/avatars/avatar_1.jpg"
+                                                src="/img/user-avatar.webp"
                                                 alt="avatar 1"
                                                 className="rounded-2lg"
                                                 loading="lazy"

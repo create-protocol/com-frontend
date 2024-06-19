@@ -15,14 +15,14 @@ export default function Faq() {
             Why Creative Objective Models?
           </h2>
           <p className="text-lg dark:text-jacarta-300">
-            COMs can be used to represent items such as photos, videos, audio,
-            and other types of digital files.
+            COMs can be used to represent items such as photos, videos, audio, and other types of digital files.
           </p>
         </div>
         <div className="lg:flex lg:flex-nowrap justify-center">
-          <div>
+          <div className='flex justify-center w-full'>
             <iframe
-                width="560"
+                className='lg:w-3/4 w-4/5'
+                // width="560"
                 height="315"
                 src={url}
                 frameBorder="0"

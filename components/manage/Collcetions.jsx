@@ -10,7 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import {useAccount} from "wagmi";
 
-export default function Collcetions() {
+export default function   Collcetions() {
   const [allItems, setAllItems] = useState(useritems);
   const {isConnected,account,isConnecting,isReconnecting} = useAccount()
   useEffect(() => {
@@ -51,14 +51,14 @@ export default function Collcetions() {
             ?<></>
             : !isConnected
                 ?<p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
-           : <>
+           : <div className='h-full w-full flex flex-col sm:flex-row gap-4'>
               <ul
-                  className="nav nav-tabs scrollbar-custom mb-12 flex items-center justify-start overflow-x-auto overflow-y-hidden border-b border-jacarta-100 pb-px dark:border-jacarta-600 md:justify-center"
+                  className="scrollbar-custom mb-12 mr-8 flex sm:flex-col items-start justify-start overflow-x-auto sm:overflow-x-hidden  overflow-y-hidden border-jacarta-100 pb-px dark:border-jacarta-600"
                   role="tablist"
               >
                 <li className="nav-item" role="presentation">
                   <button
-                      className="nav-link active relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                      className="nav2-link active relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                       id="on-sale-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#on-sale"
@@ -84,7 +84,7 @@ export default function Collcetions() {
                 </li>
                 <li className="nav-item" role="presentation">
                   <button
-                      className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                      className="nav2-link relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                       id="owned-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#owned"
@@ -108,7 +108,7 @@ export default function Collcetions() {
                 </li>
                 <li className="nav-item" role="presentation">
                   <button
-                      className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                      className="nav2-link relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                       id="created-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#created"
@@ -128,7 +128,7 @@ export default function Collcetions() {
                       <path d="M5 5v3h14V5H5zM4 3h16a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm2 9h6a1 1 0 0 1 1 1v3h1v6h-4v-6h1v-2H5a1 1 0 0 1-1-1v-2h2v1zm11.732 1.732l1.768-1.768 1.768 1.768a2.5 2.5 0 1 1-3.536 0z" />
                     </svg>
                     <span className="font-display text-base font-medium">
-                Created (20)
+                Created
               </span>
                   </button>
                 </li>
@@ -160,7 +160,7 @@ export default function Collcetions() {
                 {/*</li>*/}
                 <li className="nav-item" role="presentation">
                   <button
-                      className="nav-link relative flex items-center whitespace-nowrap py-3 px-6 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                      className="nav2-link relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                       id="activity-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#activity"
@@ -782,7 +782,7 @@ export default function Collcetions() {
                 </div>
                 {/* end activity tab */}
               </div>
-            </>
+            </div>
         }
       </div>
     </section>

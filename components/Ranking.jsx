@@ -287,7 +287,7 @@ export default function Ranking() {
                     <Image
                       width={40}
                       height={40}
-                      src={elm.image}
+                      src={'/img/ai-icon.jpeg'}
                       alt="avatar 1"
                       className="rounded-2lg"
                       loading="lazy"

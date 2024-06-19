@@ -6,37 +6,37 @@ import { useState } from "react";
 const collections = [
   {
     id: 1,
-    src: "/img/avatars/collection_ava_1.png",
+    src: "/img/user-avatar.webp",
     name: "CryptoKitties",
   },
   {
     id: 1,
-    src: "/img/avatars/collection_ava_2.jpg",
+    src: "/img/user-avatar.webp",
     name: "KaijuKings",
   },
   {
     id: 2,
-    src: "/img/avatars/collection_ava_3.png",
+    src: "/img/user-avatar.webp",
     name: "Kumo x World",
   },
   {
     id: 3,
-    src: "/img/avatars/collection_ava_4.jpg",
+    src: "/img/user-avatar.webp",
     name: "Irene DAO",
   },
   {
     id: 4,
-    src: "/img/avatars/collection_ava_5.png",
+    src: "/img/user-avatar.webp",
     name: "GenerativeDungeon",
   },
   {
     id: 5,
-    src: "/img/avatars/collection_ava_6.jpg",
+    src: "/img/user-avatar.webp",
     name: "ENS Domains",
   },
   {
     id: 6,
-    src: "/img/avatars/collection_ava_7.png",
+    src: "/img/user-avatar.webp",
     name: "Cozy Penguin",
   },
 ];

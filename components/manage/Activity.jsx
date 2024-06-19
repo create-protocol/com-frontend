@@ -48,9 +48,9 @@ export default function Activity() {
   }, [currentCategory]);
 
   return (
-    <div className="lg:flex justify-center">
+    <div className="flex justify-center">
       {/* Records */}
-      <div className="mb-10 shrink-0 basis-8/12 space-y-5 lg:mb-0 lg:pr-10">
+      <div className="mb-10 shrink-0 space-y-5 lg:mb-0 lg:pr-10">
         {filteredItems.map((elm, i) => (
           <Link
             key={i}
