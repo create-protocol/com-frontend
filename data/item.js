@@ -643,7 +643,7 @@ export const collections2 = [
   },
   {
     id: 53,
-    imageSrc: "/img/products/item_13_lg.gif",
+    imageSrc: "/img/item_13_lg.gif",
     avatarSrc: "/img/user-avatar.webp",
     title: "Etherium NFT Launching Lab",
     subTitle: "051_Hart",
