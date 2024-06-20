@@ -30,24 +30,31 @@ export default function Benefits() {
                                     role="presentation"
                                 >
                                     <button
-                                        className={`nav-link nav-link--style-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600 ${
+                                        className={`nav-link nav-link--style-2 items-start gap-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600 ${
                                             currentTabItem == elm ? "active" : ""
                                         }`}
                                     >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            viewBox="0 0 24 24"
-                                            width="24"
-                                            height="24"
-                                            className="mr-2 h-8 w-8 flex-shrink-0 fill-[#03b56a]"
-                                        >
-                                            <path fill="none" d="M0 0h24v24H0z"/>
-                                            <path d={elm.svgPath}/>
-                                        </svg>
+                                        <Image
+                                            width={24}
+                                            height={24}
+                                            src={elm.imageIcon}
+                                            alt="icon"
+                                            className="rounded-[0.625rem] object-cover"
+                                        />
+                                        {/*<svg*/}
+                                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                                        {/*    viewBox="0 0 24 24"*/}
+                                        {/*    width="24"*/}
+                                        {/*    height="24"*/}
+                                        {/*    className="mr-2 h-8 w-8 flex-shrink-0 fill-[#03b56a]"*/}
+                                        {/*>*/}
+                                        {/*    <path fill="none" d="M0 0h24v24H0z"/>*/}
+                                        {/*    <path d={elm.svgPath}/>*/}
+                                        {/*</svg>*/}
 
                                         <div>
                       <span
-                          className="mb-2 mt-1 block font-display text-xl font-medium group-hover:text-[#03b56a] dark:text-white">
+                          className=" block font-display text-xl font-medium group-hover:text-[#03b56a] dark:text-white">
                         {elm.title}
                       </span>
                                             <div className="nav-link-content hidden">

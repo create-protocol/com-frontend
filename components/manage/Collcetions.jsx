@@ -35,7 +35,7 @@ export default function   Collcetions() {
 
   // console.log('isReconnecting--',isReconnecting,isConnected,isConnecting,account)
   return (
-    <section className="relative py-24 pt-20">
+    <section className="relative py-24 pt-20 h-full">
       <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
         <Image
           width={1920}
@@ -45,12 +45,12 @@ export default function   Collcetions() {
           className="h-full w-full"
         />
       </picture>
-      <div className="container">
+      <div className="container h-full">
         {/* Tabs Nav */}
         {(isConnecting || isReconnecting)
             ?<></>
             : !isConnected
-                ?<p className='w-full text-center'>Please connect your wallet to manage your COMs.</p>
+                ?<p className='w-full h-full text-center'>Please connect your wallet to manage your COMs.</p>
            : <div className='h-full w-full flex flex-col sm:flex-row gap-4'>
               <ul
                   className="scrollbar-custom mb-12 mr-8 flex sm:flex-col items-start justify-start overflow-x-auto sm:overflow-x-hidden  overflow-y-hidden border-jacarta-100 pb-px dark:border-jacarta-600"

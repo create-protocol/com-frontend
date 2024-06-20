@@ -12,7 +12,7 @@ export default function UserPage() {
   return (
     <>
       <Header1 />
-      <main className="pt-[5.5rem] lg:pt-24">
+      <main className="pt-[5.5rem] lg:pt-24 min-h-screen">
         {/*<Banner />*/}
         {/*<Profile />*/}
         <Collcetions />
