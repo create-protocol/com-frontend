@@ -30,15 +30,15 @@ export default function Hero2() {
                     className="w-full"
                 />
             </picture>
-            <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-                <Image
-                    width={1920}
-                    height={900}
-                    src="/img/gradient_dark.jpg"
-                    alt="gradient dark"
-                    className="w-full"
-                />
-            </picture>
+            {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">*/}
+            {/*    <Image*/}
+            {/*        width={1920}*/}
+            {/*        height={900}*/}
+            {/*        src="/img/gradient_dark.jpg"*/}
+            {/*        alt="gradient dark"*/}
+            {/*        className="w-full"*/}
+            {/*    />*/}
+            {/*</picture>*/}
 
             <div className="container">
                 <div className="py-16 text-center">
@@ -108,7 +108,7 @@ export default function Hero2() {
                             <SwiperSlide key={i}>
                                 <article>
                                     <div
-                                        className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-jacarta-700">
+                                        className="block overflow-hidden rounded-2.5xl bg-white shadow-md transition-shadow hover:shadow-lg dark:bg-[#4A4A4A]">
                                         <figure className="relative">
                                             <Link href={`/explore/${elm.id}`}>
                                                 <Image

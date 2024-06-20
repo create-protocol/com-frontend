@@ -228,10 +228,10 @@ export default function Ranking() {
         <div className="scrollbar-custom overflow-x-auto">
           <div
             role="table"
-            className="w-full min-w-[736px] border border-jacarta-100 bg-white text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white lg:rounded-2lg"
+            className="w-full min-w-[736px] border border-jacarta-100 bg-white text-sm dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white lg:rounded-2lg"
           >
             <div
-              className="flex rounded-t-2lg bg-jacarta-50 dark:bg-jacarta-600"
+              className="flex rounded-t-2lg bg-jacarta-50 dark:bg-[#4A4A4A]/90"
               role="row"
             >
               <div className="w-[28%] py-3 px-4" role="columnheader">
@@ -279,7 +279,7 @@ export default function Ranking() {
                 role="row"
               >
                 <div
-                  className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[28%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span className="mr-2 lg:mr-4">{i + 1}</span>
@@ -294,7 +294,7 @@ export default function Ranking() {
                     />
                     {elm.varified && (
                       <div
-                        className="absolute -right-2 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-green dark:border-jacarta-600"
+                        className="absolute -right-2 -bottom-1 flex h-6 w-6 items-center justify-center rounded-full border-2 border-white bg-green dark:border-[#156F49]"
                         data-tippy-content="Verified Collection"
                       >
                         <svg
@@ -315,7 +315,7 @@ export default function Ranking() {
                   </span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span className="-ml-1" data-tippy-content="ETH">
@@ -355,7 +355,7 @@ export default function Ranking() {
                   </span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span
@@ -367,7 +367,7 @@ export default function Ranking() {
                   </span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span
@@ -381,7 +381,7 @@ export default function Ranking() {
                   </span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span className="-ml-1" data-tippy-content={elm.collection}>
@@ -421,13 +421,13 @@ export default function Ranking() {
                   </span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span>{elm.owner}</span>
                 </div>
                 <div
-                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+                  className="flex w-[12%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
                   role="cell"
                 >
                   <span>{elm.supply}</span>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Partners2() {
     return (
-        <section className="overflow-hidden py-24 dark:bg-jacarta-900">
+        <section className="overflow-hidden py-24 dark:bg-[#000]">
             <div className="container">
                 <div className="mx-auto mb-14 max-w-xl text-center">
                     <h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">

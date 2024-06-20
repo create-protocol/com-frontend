@@ -252,7 +252,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 
 .nav-link--style-2.active {
-  @apply rounded-2.5xl border-b-0 bg-white shadow-2xl after:hidden dark:bg-jacarta-700;
+  @apply rounded-2.5xl border-b-0 bg-white shadow-2xl after:hidden dark:bg-[#4A4A4A];
 }
 
 .nav-link--style-3 {

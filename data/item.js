@@ -220,7 +220,7 @@ export const useritems = [
   },
   {
     id: 17,
-    imageSrc: "/img/text-icon.webp",
+    imageSrc: "/img/ai-icon.jpeg",
     title: "Splendid Girl",
     likes: 159,
     creatorAvatar: "/img/user-avatar.webp",
@@ -278,7 +278,7 @@ export const useritems = [
   },
   {
     id: 22,
-    imageSrc: "/img/text-icon.webp",
+    imageSrc: "/img/art-icon.jpeg",
     title: "Flourishing Cat #180",
     likes: 15,
     creatorAvatar: "/img/user-avatar.webp",
@@ -335,7 +335,7 @@ export const useritems = [
   },
   {
     id: 27,
-    imageSrc: "/img/text-icon.webp",
+    imageSrc: "/img/video-icon.png",
     title: "SwagFox#133",
     likes: 160,
     creatorAvatar: "/img/user-avatar.webp",

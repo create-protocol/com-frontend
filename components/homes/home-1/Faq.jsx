@@ -8,7 +8,7 @@ export default function Faq() {
   const [isOpen, setIsOpen] = useState(false);
   const url = `https://www.youtube.com/embed/q2pqwUmyA2M`
   return (
-    <section className="bg-light-base py-24 dark:bg-jacarta-800">
+    <section className="bg-light-base py-24 dark:bg-[#000]">
       <div className="container">
         <div className="mx-auto mb-12 max-w-xl text-center">
           <h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">

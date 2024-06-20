@@ -8,6 +8,7 @@ import {contractConfig} from "@/contractInteraction/contractConfig";
 import abi from '@/contractInteraction/abi.json';
 import configs from "@/config.json";
 import {toast, Slide} from "react-toastify";
+import {toastOptions} from "@/data/toastOptions";
 
 export default function Hero() {
     const {address, isConnected} = useAccount();
@@ -44,17 +45,6 @@ export default function Hero() {
         document.body.removeChild(link);
     };
 
-    const toastOptions = {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: true,
-        closeOnClick: false,
-        pauseOnHover: true,
-        draggable: true,
-        theme: "light",
-        transition: Slide,
-    }
-
     useEffect(() => {
         if (isPending || isLoading) {
             console.log('Processing...')
@@ -83,15 +73,15 @@ export default function Hero() {
                     className="w-full"
                 />
             </picture>
-            <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-                <Image
-                    width={1920}
-                    height={900}
-                    src="/img/gradient_dark.jpg"
-                    alt="gradient dark"
-                    className="w-full"
-                />
-            </picture>
+            {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">*/}
+            {/*    <Image*/}
+            {/*        width={1920}*/}
+            {/*        height={900}*/}
+            {/*        src="/img/gradient_dark.jpg"*/}
+            {/*        alt="gradient dark"*/}
+            {/*        className="w-full"*/}
+            {/*    />*/}
+            {/*</picture>*/}
 
             <div className="container h-full">
                 <div className="grid h-full items-center gap-4 md:grid-cols-12">

@@ -13,19 +13,19 @@ export default function Cta() {
           className="h-full w-full"
         />
       </picture>
-      <picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">
-        <Image
-          width={1920}
-          height={900}
-          src="/img/gradient_dark.jpg"
-          alt="gradient dark"
-          className="h-full w-full"
-        />
-      </picture>
+      {/*<picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">*/}
+      {/*  <Image*/}
+      {/*    width={1920}*/}
+      {/*    height={900}*/}
+      {/*    src="/img/gradient_dark.jpg"*/}
+      {/*    alt="gradient dark"*/}
+      {/*    className="h-full w-full"*/}
+      {/*  />*/}
+      {/*</picture>*/}
       <div className="container">
         <div className="lg:flex lg:space-x-12">
           <div className="mb-12 lg:w-1/2">
-            <div className="rounded-2.5xl bg-white p-12 dark:bg-jacarta-700">
+            <div className="rounded-2.5xl bg-white p-12 dark:bg-[#4A4A4A]">
               <h2 className="mb-5 font-display text-3xl text-jacarta-700 dark:text-white">
                 A global distributed community
               </h2>
@@ -101,7 +101,7 @@ export default function Cta() {
             </div>
           </div>
           <div className="mb-12 lg:w-1/2">
-            <div className="h-full rounded-2.5xl bg-white p-12 dark:bg-jacarta-700">
+            <div className="h-full rounded-2.5xl bg-white p-12 dark:bg-[#4A4A4A]">
               <h2 className="mb-5 font-display text-3xl text-jacarta-700 dark:text-white">
                 Express Partnership Interest
                 <br />

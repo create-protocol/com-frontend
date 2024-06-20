@@ -55,7 +55,7 @@ export default function Activity() {
           <Link
             key={i}
             href={`/explore/${elm.id}`}
-            className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700"
+            className="relative flex items-center rounded-2.5xl border border-jacarta-100 bg-white p-8 transition-shadow hover:shadow-lg dark:border-[#4A4A4A] dark:bg-[#4A4A4A]"
           >
             <figure className="mr-5 self-start">
               <Image

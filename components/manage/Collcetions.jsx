@@ -50,7 +50,7 @@ export default function   Collcetions() {
         {(isConnecting || isReconnecting)
             ?<></>
             : !isConnected
-                ?<p className='w-full h-full text-center'>Please connect your wallet to manage your COMs.</p>
+                ?<p className='w-full h-full text-center dark:text-[#FFFFFF]'>Please connect your wallet to manage your COMs.</p>
            : <div className='h-full w-full flex flex-col sm:flex-row gap-4'>
               <ul
                   className="scrollbar-custom mb-12 mr-8 flex sm:flex-col items-start justify-start overflow-x-auto sm:overflow-x-hidden  overflow-y-hidden border-jacarta-100 pb-px dark:border-jacarta-600"
@@ -204,7 +204,7 @@ export default function   Collcetions() {
                         .filter((elm) => elm.type == "onsale")
                         .map((elm, i) => (
                             <article key={i}>
-                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-[#4A4A4A] dark:bg-[#4A4A4A]">
                                 <figure className="relative">
                                   <Link href={`/explore/${elm.id}`}>
                                     <Image
@@ -216,29 +216,29 @@ export default function   Collcetions() {
                                         loading="lazy"
                                     />
                                   </Link>
-                                  <div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
-                          <span
-                              onClick={() => addLike(elm.id)}
-                              className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${
-                                  elm.liked ? "js-likes--active" : ""
-                              }`}
-                              data-tippy-content="Favorite"
-                          >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"
-                            >
-                              <path fill="none" d="M0 0H24V24H0z" />
-                              <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
-                            </svg>
-                          </span>
-                                    <span className="text-sm dark:text-jacarta-200">
-                            {elm.likes}
-                          </span>
-                                  </div>
+                                  {/*<div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">*/}
+                          {/*<span*/}
+                          {/*    onClick={() => addLike(elm.id)}*/}
+                          {/*    className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${*/}
+                          {/*        elm.liked ? "js-likes--active" : ""*/}
+                          {/*    }`}*/}
+                          {/*    data-tippy-content="Favorite"*/}
+                          {/*>*/}
+                          {/*  <svg*/}
+                          {/*      xmlns="http://www.w3.org/2000/svg"*/}
+                          {/*      viewBox="0 0 24 24"*/}
+                          {/*      width="24"*/}
+                          {/*      height="24"*/}
+                          {/*      className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"*/}
+                          {/*  >*/}
+                          {/*    <path fill="none" d="M0 0H24V24H0z" />*/}
+                          {/*    <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />*/}
+                          {/*  </svg>*/}
+                          {/*</span>*/}
+                          {/*          <span className="text-sm dark:text-jacarta-200">*/}
+                          {/*  {elm.likes}*/}
+                          {/*</span>*/}
+                          {/*        </div>*/}
                                   <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
                                       <a href="#">
@@ -270,47 +270,47 @@ export default function   Collcetions() {
                             {elm.title}
                           </span>
                                   </Link>
-                                  <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
-                                    <a
-                                        href="#"
-                                        className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"
-                                        role="button"
-                                        id="itemActions"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                      <svg
-                                          width="16"
-                                          height="4"
-                                          viewBox="0 0 16 4"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          className="fill-jacarta-500 dark:fill-jacarta-200"
-                                      >
-                                        <circle cx="2" cy="2" r="2" />
-                                        <circle cx="8" cy="2" r="2" />
-                                        <circle cx="14" cy="2" r="2" />
-                                      </svg>
-                                    </a>
-                                    <div
-                                        className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"
-                                        aria-labelledby="itemActions"
-                                    >
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        New bid
-                                      </button>
-                                      <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Refresh Metadata
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Share
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Report
-                                      </button>
-                                    </div>
-                                  </div>
+                                  {/*<div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">*/}
+                                  {/*  <a*/}
+                                  {/*      href="#"*/}
+                                  {/*      className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"*/}
+                                  {/*      role="button"*/}
+                                  {/*      id="itemActions"*/}
+                                  {/*      data-bs-toggle="dropdown"*/}
+                                  {/*      aria-expanded="false"*/}
+                                  {/*  >*/}
+                                  {/*    <svg*/}
+                                  {/*        width="16"*/}
+                                  {/*        height="4"*/}
+                                  {/*        viewBox="0 0 16 4"*/}
+                                  {/*        fill="none"*/}
+                                  {/*        xmlns="http://www.w3.org/2000/svg"*/}
+                                  {/*        className="fill-jacarta-500 dark:fill-jacarta-200"*/}
+                                  {/*    >*/}
+                                  {/*      <circle cx="2" cy="2" r="2" />*/}
+                                  {/*      <circle cx="8" cy="2" r="2" />*/}
+                                  {/*      <circle cx="14" cy="2" r="2" />*/}
+                                  {/*    </svg>*/}
+                                  {/*  </a>*/}
+                                  {/*  <div*/}
+                                  {/*      className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"*/}
+                                  {/*      aria-labelledby="itemActions"*/}
+                                  {/*  >*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      New bid*/}
+                                  {/*    </button>*/}
+                                  {/*    <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Refresh Metadata*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Share*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Report*/}
+                                  {/*    </button>*/}
+                                  {/*  </div>*/}
+                                  {/*</div>*/}
                                 </div>
                                 <div className="mt-2 text-sm">
                         <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">
@@ -373,7 +373,7 @@ export default function   Collcetions() {
                         .filter((elm) => elm.type == "owned")
                         .map((elm, i) => (
                             <article key={i}>
-                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-[#4A4A4A] dark:bg-[#4A4A4A]">
                                 <figure className="relative">
                                   <Link href={`/explore/${elm.id}`}>
                                     <Image
@@ -385,29 +385,29 @@ export default function   Collcetions() {
                                         loading="lazy"
                                     />
                                   </Link>
-                                  <div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
-                          <span
-                              onClick={() => addLike(elm.id)}
-                              className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${
-                                  elm.liked ? "js-likes--active" : ""
-                              }`}
-                              data-tippy-content="Favorite"
-                          >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"
-                            >
-                              <path fill="none" d="M0 0H24V24H0z" />
-                              <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
-                            </svg>
-                          </span>
-                                    <span className="text-sm dark:text-jacarta-200">
-                            {elm.likes}
-                          </span>
-                                  </div>
+                                  {/*<div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">*/}
+                          {/*<span*/}
+                          {/*    onClick={() => addLike(elm.id)}*/}
+                          {/*    className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${*/}
+                          {/*        elm.liked ? "js-likes--active" : ""*/}
+                          {/*    }`}*/}
+                          {/*    data-tippy-content="Favorite"*/}
+                          {/*>*/}
+                          {/*  <svg*/}
+                          {/*      xmlns="http://www.w3.org/2000/svg"*/}
+                          {/*      viewBox="0 0 24 24"*/}
+                          {/*      width="24"*/}
+                          {/*      height="24"*/}
+                          {/*      className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"*/}
+                          {/*  >*/}
+                          {/*    <path fill="none" d="M0 0H24V24H0z" />*/}
+                          {/*    <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />*/}
+                          {/*  </svg>*/}
+                          {/*</span>*/}
+                          {/*          <span className="text-sm dark:text-jacarta-200">*/}
+                          {/*  {elm.likes}*/}
+                          {/*</span>*/}
+                          {/*        </div>*/}
                                   <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
                                       <a href="#">
@@ -439,47 +439,47 @@ export default function   Collcetions() {
                             {elm.title}
                           </span>
                                   </Link>
-                                  <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
-                                    <a
-                                        href="#"
-                                        className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"
-                                        role="button"
-                                        id="itemActions"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                      <svg
-                                          width="16"
-                                          height="4"
-                                          viewBox="0 0 16 4"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          className="fill-jacarta-500 dark:fill-jacarta-200"
-                                      >
-                                        <circle cx="2" cy="2" r="2" />
-                                        <circle cx="8" cy="2" r="2" />
-                                        <circle cx="14" cy="2" r="2" />
-                                      </svg>
-                                    </a>
-                                    <div
-                                        className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"
-                                        aria-labelledby="itemActions"
-                                    >
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        New bid
-                                      </button>
-                                      <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Refresh Metadata
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Share
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Report
-                                      </button>
-                                    </div>
-                                  </div>
+                                  {/*<div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">*/}
+                                  {/*  <a*/}
+                                  {/*      href="#"*/}
+                                  {/*      className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"*/}
+                                  {/*      role="button"*/}
+                                  {/*      id="itemActions"*/}
+                                  {/*      data-bs-toggle="dropdown"*/}
+                                  {/*      aria-expanded="false"*/}
+                                  {/*  >*/}
+                                  {/*    <svg*/}
+                                  {/*        width="16"*/}
+                                  {/*        height="4"*/}
+                                  {/*        viewBox="0 0 16 4"*/}
+                                  {/*        fill="none"*/}
+                                  {/*        xmlns="http://www.w3.org/2000/svg"*/}
+                                  {/*        className="fill-jacarta-500 dark:fill-jacarta-200"*/}
+                                  {/*    >*/}
+                                  {/*      <circle cx="2" cy="2" r="2" />*/}
+                                  {/*      <circle cx="8" cy="2" r="2" />*/}
+                                  {/*      <circle cx="14" cy="2" r="2" />*/}
+                                  {/*    </svg>*/}
+                                  {/*  </a>*/}
+                                  {/*  <div*/}
+                                  {/*      className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"*/}
+                                  {/*      aria-labelledby="itemActions"*/}
+                                  {/*  >*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      New bid*/}
+                                  {/*    </button>*/}
+                                  {/*    <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Refresh Metadata*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Share*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Report*/}
+                                  {/*    </button>*/}
+                                  {/*  </div>*/}
+                                  {/*</div>*/}
                                 </div>
                                 <div className="mt-2 text-sm">
                         <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">
@@ -542,7 +542,7 @@ export default function   Collcetions() {
                         .filter((elm) => elm.type == "created")
                         .map((elm, i) => (
                             <article key={i}>
-                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-jacarta-700 dark:bg-jacarta-700">
+                              <div className="block rounded-2.5xl border border-jacarta-100 bg-white p-[1.1875rem] transition-shadow hover:shadow-lg dark:border-[#4A4A4A] dark:bg-[#4A4A4A]">
                                 <figure className="relative">
                                   <Link href={`/explore/${elm.id}`}>
                                     <Image
@@ -554,29 +554,29 @@ export default function   Collcetions() {
                                         loading="lazy"
                                     />
                                   </Link>
-                                  <div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
-                          <span
-                              onClick={() => addLike(elm.id)}
-                              className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${
-                                  elm.liked ? "js-likes--active" : ""
-                              }`}
-                              data-tippy-content="Favorite"
-                          >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 24 24"
-                                width="24"
-                                height="24"
-                                className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"
-                            >
-                              <path fill="none" d="M0 0H24V24H0z" />
-                              <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
-                            </svg>
-                          </span>
-                                    <span className="text-sm dark:text-jacarta-200">
-                            {elm.likes}
-                          </span>
-                                  </div>
+                                  {/*<div className="absolute top-3 right-3 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">*/}
+                          {/*<span*/}
+                          {/*    onClick={() => addLike(elm.id)}*/}
+                          {/*    className={`js-likes relative cursor-pointer before:absolute before:h-4 before:w-4 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${*/}
+                          {/*        elm.liked ? "js-likes--active" : ""*/}
+                          {/*    }`}*/}
+                          {/*    data-tippy-content="Favorite"*/}
+                          {/*>*/}
+                          {/*  <svg*/}
+                          {/*      xmlns="http://www.w3.org/2000/svg"*/}
+                          {/*      viewBox="0 0 24 24"*/}
+                          {/*      width="24"*/}
+                          {/*      height="24"*/}
+                          {/*      className="h-4 w-4 fill-jacarta-500 hover:fill-red dark:fill-jacarta-200 dark:hover:fill-red"*/}
+                          {/*  >*/}
+                          {/*    <path fill="none" d="M0 0H24V24H0z" />*/}
+                          {/*    <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />*/}
+                          {/*  </svg>*/}
+                          {/*</span>*/}
+                          {/*          <span className="text-sm dark:text-jacarta-200">*/}
+                          {/*  {elm.likes}*/}
+                          {/*</span>*/}
+                          {/*        </div>*/}
                                   <div className="absolute left-3 -bottom-3">
                                     <div className="flex -space-x-2">
                                       <a href="#">
@@ -608,47 +608,47 @@ export default function   Collcetions() {
                             {elm.title}
                           </span>
                                   </Link>
-                                  <div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">
-                                    <a
-                                        href="#"
-                                        className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"
-                                        role="button"
-                                        id="itemActions"
-                                        data-bs-toggle="dropdown"
-                                        aria-expanded="false"
-                                    >
-                                      <svg
-                                          width="16"
-                                          height="4"
-                                          viewBox="0 0 16 4"
-                                          fill="none"
-                                          xmlns="http://www.w3.org/2000/svg"
-                                          className="fill-jacarta-500 dark:fill-jacarta-200"
-                                      >
-                                        <circle cx="2" cy="2" r="2" />
-                                        <circle cx="8" cy="2" r="2" />
-                                        <circle cx="14" cy="2" r="2" />
-                                      </svg>
-                                    </a>
-                                    <div
-                                        className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"
-                                        aria-labelledby="itemActions"
-                                    >
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        New bid
-                                      </button>
-                                      <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Refresh Metadata
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Share
-                                      </button>
-                                      <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">
-                                        Report
-                                      </button>
-                                    </div>
-                                  </div>
+                                  {/*<div className="dropup rounded-full hover:bg-jacarta-100 dark:hover:bg-jacarta-600">*/}
+                                  {/*  <a*/}
+                                  {/*      href="#"*/}
+                                  {/*      className="dropdown-toggle inline-flex h-8 w-8 items-center justify-center text-sm"*/}
+                                  {/*      role="button"*/}
+                                  {/*      id="itemActions"*/}
+                                  {/*      data-bs-toggle="dropdown"*/}
+                                  {/*      aria-expanded="false"*/}
+                                  {/*  >*/}
+                                  {/*    <svg*/}
+                                  {/*        width="16"*/}
+                                  {/*        height="4"*/}
+                                  {/*        viewBox="0 0 16 4"*/}
+                                  {/*        fill="none"*/}
+                                  {/*        xmlns="http://www.w3.org/2000/svg"*/}
+                                  {/*        className="fill-jacarta-500 dark:fill-jacarta-200"*/}
+                                  {/*    >*/}
+                                  {/*      <circle cx="2" cy="2" r="2" />*/}
+                                  {/*      <circle cx="8" cy="2" r="2" />*/}
+                                  {/*      <circle cx="14" cy="2" r="2" />*/}
+                                  {/*    </svg>*/}
+                                  {/*  </a>*/}
+                                  {/*  <div*/}
+                                  {/*      className="dropdown-menu dropdown-menu-end z-10 hidden min-w-[200px] whitespace-nowrap rounded-xl bg-white py-4 px-2 text-left shadow-xl dark:bg-jacarta-800"*/}
+                                  {/*      aria-labelledby="itemActions"*/}
+                                  {/*  >*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      New bid*/}
+                                  {/*    </button>*/}
+                                  {/*    <hr className="my-2 mx-4 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Refresh Metadata*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Share*/}
+                                  {/*    </button>*/}
+                                  {/*    <button className="block w-full rounded-xl px-5 py-2 text-left font-display text-sm transition-colors hover:bg-jacarta-50 dark:text-white dark:hover:bg-jacarta-600">*/}
+                                  {/*      Report*/}
+                                  {/*    </button>*/}
+                                  {/*  </div>*/}
+                                  {/*</div>*/}
                                 </div>
                                 <div className="mt-2 text-sm">
                         <span className="mr-1 text-jacarta-700 dark:text-jacarta-200">

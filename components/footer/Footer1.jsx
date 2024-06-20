@@ -2,7 +2,7 @@
 
 export default function Footer1() {
   return (
-    <footer className="page-footer bg-white dark:bg-jacarta-900">
+    <footer className="page-footer bg-white dark:bg-[#000]">
       <div className="container">
         {/*<div className="grid grid-cols-6 gap-x-7 gap-y-14 pt-24 pb-12 md:grid-cols-12">*/}
         {/*  <div className="col-span-full sm:col-span-3 md:col-span-4">*/}

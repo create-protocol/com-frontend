@@ -1,6 +1,6 @@
 export default function Details() {
   return (
-    <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-jacarta-600 dark:bg-jacarta-700 md:p-10">
+    <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-[#4A4A4A]/90 dark:bg-[#4A4A4A] md:p-10">
       <div className="mb-2 flex items-center">
         <span className="mr-2 min-w-[9rem] dark:text-jacarta-300">
           Contract Address:

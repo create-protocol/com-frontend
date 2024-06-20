@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
-export default function FileUpload() {
-  const [image, setImage] = useState(null);
+export default function FileUpload({setFormData,formData}) {
   const [imageName, setImageName] = useState("");
   const [dragging, setDragging] = useState(false);
 
@@ -24,26 +23,33 @@ export default function FileUpload() {
     setDragging(false);
     const file = e.dataTransfer.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImage(reader.result);
+      // const reader = new FileReader();
+      // reader.onload = () => {
+      setFormData({
+        ...formData,
+        file: file,
+      });
         setImageName(file.name); // Set the image name
-      };
-      reader.readAsDataURL(file);
+      // };
+      // reader.readAsDataURL(file);
     }
   };
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
-      const reader = new FileReader();
-      reader.onload = () => {
-        setImage(reader.result);
+      // const reader = new FileReader();
+      // reader.onload = () => {
+      setFormData({
+        ...formData,
+        file: file,
+      });
         setImageName(file.name); // Set the image name
-      };
-      reader.readAsDataURL(file);
+      // };
+      // reader.readAsDataURL(file);
     }
   };
+
   return (
     <div className="mb-6">
       <label className="mb-2 block font-display text-jacarta-700 dark:text-white">
@@ -67,7 +73,7 @@ export default function FileUpload() {
 
           borderRadius: "5px",
         }}
-        className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-jacarta-600 dark:bg-jacarta-700"
+        className="group relative flex max-w-md flex-col items-center justify-center rounded-lg border-2 border-dashed border-jacarta-100 bg-white py-20 px-5 text-center dark:border-[#4A4A4A]/90 dark:bg-[#4A4A4A]"
       >
         <div className="relative z-10 cursor-pointer">
           <svg
@@ -85,7 +91,7 @@ export default function FileUpload() {
             100 MB
           </p>
         </div>
-        <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-jacarta-600"></div>
+        <div className="absolute inset-4 cursor-pointer rounded bg-jacarta-50 opacity-0 group-hover:opacity-100 dark:bg-[#4A4A4A]/90"></div>
         <div></div>
         {/* {image && (
           <div className="absolute inset-4 cursor-pointer rounded">

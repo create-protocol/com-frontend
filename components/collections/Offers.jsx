@@ -5,11 +5,11 @@ export default function Offers() {
   return (
     <div
       role="table"
-      className="scrollbar-custom grid max-h-72 w-full grid-cols-5 overflow-y-auto rounded-lg rounded-tl-none border border-jacarta-100 bg-white text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
+      className="scrollbar-custom grid max-h-72 w-full grid-cols-5 overflow-y-auto rounded-lg rounded-tl-none border border-jacarta-100 bg-white text-sm dark:border-[#4A4A4A] dark:bg-[#4A4A4A] dark:text-white"
     >
       <div className="contents" role="row">
         <div
-          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-[#4A4A4A]"
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
@@ -17,7 +17,7 @@ export default function Offers() {
           </span>
         </div>
         <div
-          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-[#4A4A4A]"
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
@@ -25,7 +25,7 @@ export default function Offers() {
           </span>
         </div>
         <div
-          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-[#4A4A4A]"
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
@@ -33,7 +33,7 @@ export default function Offers() {
           </span>
         </div>
         <div
-          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-[#4A4A4A]"
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
@@ -41,7 +41,7 @@ export default function Offers() {
           </span>
         </div>
         <div
-          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-jacarta-600"
+          className="sticky top-0 bg-light-base py-2 px-4 dark:bg-[#4A4A4A]"
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">

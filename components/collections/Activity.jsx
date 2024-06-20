@@ -16,14 +16,14 @@ export default function Activity() {
 
   return (
     <>
-      <div className=" border border-b-0 border-jacarta-100 bg-light-base px-4 pt-5 pb-2.5 dark:border-jacarta-600 dark:bg-jacarta-700">
+      <div className=" border border-b-0 border-jacarta-100 bg-light-base px-4 pt-5 pb-2.5 dark:border-[#156F49] dark:bg-[#4A4A4A]">
         <div className="flex flex-wrap">
           <button
             onClick={() => setfilterAction()}
             className={
               !filterAction
                 ? "mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-transparent bg-[#03b56a] px-4 py-3 hover:bg-[#03b56a]-dark dark:hover:bg-[#03b56a]-dark fill-white"
-                : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white "
+                : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white "
             }
           >
             <svg
@@ -52,7 +52,7 @@ export default function Activity() {
               className={
                 filterAction == elm.action
                   ? "mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-transparent bg-[#03b56a] px-4 py-3 hover:bg-[#03b56a]-dark dark:hover:bg-[#03b56a]-dark fill-white"
-                  : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white "
+                  : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white "
               }
             >
               <svg
@@ -79,10 +79,10 @@ export default function Activity() {
 
       <div
         role="table"
-        className="scrollbar-custom max-h-72 w-full overflow-y-auto rounded-lg rounded-tl-none border border-jacarta-100 bg-white text-sm dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white"
+        className="scrollbar-custom max-h-72 w-full overflow-y-auto rounded-lg rounded-tl-none rounded-tr-none border border-jacarta-100 bg-white text-sm dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white"
       >
         <div
-          className="sticky top-0 flex bg-light-base dark:bg-jacarta-600"
+          className="sticky top-0 flex bg-light-base dark:bg-[#4A4A4A]/90"
           role="row"
         >
           <div className="w-[17%] py-2 px-4" role="columnheader">
@@ -114,7 +114,7 @@ export default function Activity() {
         {filteredItems.map((elm, i) => (
           <div key={i} className="flex" role="row">
             <div
-              className="flex w-[17%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+              className="flex w-[17%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
               <svg
@@ -130,7 +130,7 @@ export default function Activity() {
               {elm.action}
             </div>
             <div
-              className="flex w-[17%] items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+              className="flex w-[17%] items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
               <span className="-ml-1" data-tippy-content={elm.currency}>
@@ -170,7 +170,7 @@ export default function Activity() {
               </span>
             </div>
             <div
-              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
               <span className="text-[#03b56a]">
@@ -178,7 +178,7 @@ export default function Activity() {
               </span>
             </div>
             <div
-              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
               <span className="text-[#03b56a]">
@@ -186,7 +186,7 @@ export default function Activity() {
               </span>
             </div>
             <div
-              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+              className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
               <a
