@@ -3,24 +3,24 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative py-20 lg:pt-48">
-      <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">
-        <Image
-          width={1920}
-          height={900}
-          src="/img/gradient.jpg"
-          alt="gradient"
-          className="w-full"
-        />
-      </picture>
-      <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">
-        <Image
-          width={1920}
-          height={900}
-          src="/img/gradient_dark.jpg"
-          alt="gradient dark"
-          className="w-full"
-        />
-      </picture>
+      {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">*/}
+      {/*  <Image*/}
+      {/*    width={1920}*/}
+      {/*    height={900}*/}
+      {/*    src="/img/gradient.jpg"*/}
+      {/*    alt="gradient"*/}
+      {/*    className="w-full"*/}
+      {/*  />*/}
+      {/*</picture>*/}
+      {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">*/}
+      {/*  <Image*/}
+      {/*    width={1920}*/}
+      {/*    height={900}*/}
+      {/*    src="/img/gradient_dark.jpg"*/}
+      {/*    alt="gradient dark"*/}
+      {/*    className="w-full"*/}
+      {/*  />*/}
+      {/*</picture>*/}
 
       <div className="container">
         <div className="h-full items-center gap-4 lg:grid lg:grid-cols-12">

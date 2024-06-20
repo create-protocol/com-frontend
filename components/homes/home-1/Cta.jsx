@@ -4,15 +4,15 @@ import Image from "next/image";
 export default function Cta() {
   return (
     <section className="relative py-24">
-      <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-        <Image
-          width={1920}
-          height={900}
-          src="/img/gradient.jpg"
-          alt="gradient"
-          className="h-full w-full"
-        />
-      </picture>
+      {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
+      {/*  <Image*/}
+      {/*    width={1920}*/}
+      {/*    height={900}*/}
+      {/*    src="/img/gradient.jpg"*/}
+      {/*    alt="gradient"*/}
+      {/*    className="h-full w-full"*/}
+      {/*  />*/}
+      {/*</picture>*/}
       {/*<picture className="pointer-events-none absolute inset-0 -z-10 hidden dark:block">*/}
       {/*  <Image*/}
       {/*    width={1920}*/}

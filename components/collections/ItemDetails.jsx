@@ -22,15 +22,15 @@ export default function ItemDetails({id}) {
     return (
         <>
             <section className="relative pt-12 pb-24 lg:py-24">
-                <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                    <Image
-                        width={1920}
-                        height={789}
-                        src="/img/gradient_light.jpg"
-                        alt="gradient"
-                        className="h-full w-full"
-                    />
-                </picture>
+                {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
+                {/*    <Image*/}
+                {/*        width={1920}*/}
+                {/*        height={789}*/}
+                {/*        src="/img/gradient_light.jpg"*/}
+                {/*        alt="gradient"*/}
+                {/*        className="h-full w-full"*/}
+                {/*    />*/}
+                {/*</picture>*/}
                 <div className="container">
                     {/* Item */}
                     <div className="md:flex md:flex-wrap">

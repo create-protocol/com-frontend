@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
         itemScope
         itemType="http://schema.org/WebPage"
         className={
-          "overflow-x-hidden font-body text-jacarta-500 dark:bg-[#000]"
+          "overflow-x-hidden font-body text-jacarta-500 bg-[#000]/5 dark:bg-[#000]/90"
         }
       >
       <ToastContainer />

@@ -233,7 +233,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .js-page-header--is-sticky.page-header--transparent,
 .dark .js-page-header--is-sticky {
-  @apply bg-jacarta-700/50;
+  @apply bg-[#000]/50;
 }
 
 /* Tabs */

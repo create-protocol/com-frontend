@@ -38,38 +38,47 @@ export default function Header1() {
   return (
     <>
       <header
-        className={`js-page-header fixed top-0 z-30 w-full backdrop-blur transition-colors ${
-          scrolled ? "js-page-header--is-sticky" : ""
+        className={`js-page-header fixed top-0 z-30 w-full bg-[#FFF] dark:dark:bg-[#000] backdrop-blur transition-colors ${
+          scrolled ? "js-page-header--is-sticky bg-[#000]/5 dark:bg-[#FFF]/5" : ""
         }`}
       >
-        <div className="flex items-center px-6 py-6 xl:px-24">
+        <div className="flex items-center px-6 py-6 xl:px-24 gap-6">
           {/* Logo */}
-          <Link href="/" className="font-display text-2xl text-jacarta-700 dark:text-white lg:text-3xl xl:text-4xl h-fit">
+          <Link href="/" className="flex items-center gap-1 font-display text-base text-[#4A4A4A] text-[#4A4A4A] dark:text-white  h-fit">
             {/*COM*/}
             <Image
-              width={176}
-              height={40}
-              src="/img/black.png"
-              className="max-h-10"
-              // className="max-h-7 dark:hidden"
+              width={65}
+              height={49}
+              src="/img/white.png"
+              // className="max-h-10"
+              className="max-h-10 hidden dark:block"
               alt="COM"
             />
+            <Image
+                width={65}
+                height={49}
+                src="/img/black.png"
+                // className="max-h-10"
+                className="max-h-10 dark:hidden block"
+                alt="COM"
+            />
+            CREATE PROTOCOL
           </Link>
 
           {/* Menu / Actions */}
-          <div className="flex-1 js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto rtl:mr-auto rtl:ml-0 lg:justify-end items-center bg-white opacity-0 dark:bg-[#4A4A4A] lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent ">
+          <div className="flex-1 js-mobile-menu invisible lg:visible fixed inset-0 z-10 ml-auto rtl:mr-auto rtl:ml-0 lg:justify-between items-center bg-white opacity-0 dark:bg-[#4A4A4A] lg:relative lg:inset-auto lg:flex lg:bg-transparent lg:opacity-100 dark:lg:bg-transparent ">
             {/* Mobile Logo / Menu Close */}
             <div className="t-0 fixed left-0 z-10 flex w-full items-center justify-between bg-white p-6 dark:bg-jacarta-800 lg:hidden">
               {/* Mobile Logo */}
-              <Link href="/" className="font-display text-2xl text-jacarta-700 dark:text-white lg:text-3xl xl:text-4xl h-fit">
+              <Link href="/" className=" font-display text-2xl text-[#4A4A4A] dark:text-white lg:text-3xl xl:text-4xl h-fit">
               {/*COM*/}
-               {/*<Image*/}
-                {/*  width={130}*/}
-                {/*  height={28}*/}
-                {/*  src="/img/logo.png"*/}
-                {/*  className="max-h-7 dark:hidden"*/}
-                {/*  alt="Xhibiter | NFT Marketplace"*/}
-                {/*/>*/}
+               <Image
+                  width={65}
+                  height={49}
+                  src="/img/black.png"
+                  className="max-h-7 dark:hidden"
+                  alt="COM"
+                />
                 {/*<Image*/}
                 {/*  width={130}*/}
                 {/*  height={28}*/}
@@ -78,11 +87,11 @@ export default function Header1() {
                 {/*  alt="Xhibiter | NFT Marketplace"*/}
                 {/*/>*/}
                 <Image
-                    width={146}
-                    height={28}
-                    src="/img/black.png"
-                    className="max-h-7"
-                    // className="max-h-7 dark:hidden"
+                    width={65}
+                    height={49}
+                    src="/img/white.png"
+                    // className="max-h-7"
+                    className="max-h-7 hidden dark:block"
                     alt="COM"
                 />
               </Link>

@@ -64,7 +64,7 @@ const chartsOptions = {
     tooltip: {
       usePointStyle: true,
       position: "nearest",
-      backgroundColor: "#131740",
+      backgroundColor: "#4A4A4A",
       titleAlign: "center",
       bodyAlign: "center",
       footerAlign: "center",

@@ -3,14 +3,14 @@ import Link from "next/link";
 
 export default function Hero1() {
     return (
-        <section className="relative h-screen">
-            <Image
-                width={1920}
-                height={1014}
-                src="/img/hero/ico_landing_roadmap.jpg"
-                alt="image"
-                className="absolute inset-0 -z-10 h-full w-full object-cover"
-            />
+        <section className="relative h-screen bg-[#000]/40 dark:bg-[#FFF]/40">
+            {/*<Image*/}
+            {/*    width={1920}*/}
+            {/*    height={1014}*/}
+            {/*    src="/img/hero/ico_landing_roadmap.jpg"*/}
+            {/*    alt="image"*/}
+            {/*    className="absolute inset-0 -z-10 h-full w-full object-cover"*/}
+            {/*/>*/}
             <div className="ml-auto mr-auto h-full max-w-[91rem] px-4">
                 <div className="grid h-full items-center gap-4 md:grid-cols-12">
                     <div

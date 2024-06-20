@@ -21,15 +21,15 @@ export default function Hero2() {
     }, []);
     return (
         <section className="hero relative py-20">
-            <picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">
-                <Image
-                    width={1920}
-                    height={900}
-                    src="/img/gradient.jpg"
-                    alt="gradient"
-                    className="w-full"
-                />
-            </picture>
+            {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 dark:hidden">*/}
+            {/*    <Image*/}
+            {/*        width={1920}*/}
+            {/*        height={900}*/}
+            {/*        src="/img/gradient.jpg"*/}
+            {/*        alt="gradient"*/}
+            {/*        className="w-full"*/}
+            {/*    />*/}
+            {/*</picture>*/}
             {/*<picture className="pointer-events-none absolute inset-x-0 top-0 -z-10 hidden dark:block">*/}
             {/*    <Image*/}
             {/*        width={1920}*/}

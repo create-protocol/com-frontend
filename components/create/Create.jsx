@@ -79,16 +79,16 @@ export default function Create() {
 
     return (
         <section className="relative py-24">
-            <picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">
-                <Image
-                    width={1920}
-                    height={789}
-                    src="/img/gradient_light.jpg"
-                    priority
-                    alt="gradient"
-                    className="h-full w-full"
-                />
-            </picture>
+            {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
+            {/*    <Image*/}
+            {/*        width={1920}*/}
+            {/*        height={789}*/}
+            {/*        src="/img/gradient_light.jpg"*/}
+            {/*        priority*/}
+            {/*        alt="gradient"*/}
+            {/*        className="h-full w-full"*/}
+            {/*    />*/}
+            {/*</picture>*/}
             <div className="container">
                 {/* Tabs Nav */}
                 <ul
