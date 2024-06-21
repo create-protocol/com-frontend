@@ -58,7 +58,7 @@ export default function   Collcetions() {
               >
                 <li className="nav-item" role="presentation">
                   <button
-                      className="nav2-link active relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
+                      className="nav2-link active relative flex items-center whitespace-nowrap py-3 px-6 pe-12 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
                       id="on-sale-tab"
                       data-bs-toggle="tab"
                       data-bs-target="#on-sale"
@@ -78,7 +78,7 @@ export default function   Collcetions() {
                       <path d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h16V5H4zm4.5 9H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V6h2v2h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v2h-2v-2H8.5v-2z" />
                     </svg>
                     <span className="font-display text-base font-medium">
-                On Sale
+                Create Credit
               </span>
                   </button>
                 </li>
@@ -103,7 +103,7 @@ export default function   Collcetions() {
                       <path fill="none" d="M0 0h24v24H0z" />
                       <path d="M12.414 5H21a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h7.414l2 2zM4 5v14h16V7h-8.414l-2-2H4zm9 8h3l-4 4-4-4h3V9h2v4z" />
                     </svg>
-                    <span className="font-display text-base font-medium">Owned</span>
+                    <span className="font-display text-base font-medium">Settings</span>
                   </button>
                 </li>
                 <li className="nav-item" role="presentation">
@@ -159,15 +159,16 @@ export default function   Collcetions() {
                 {/*  </button>*/}
                 {/*</li>*/}
                 <li className="nav-item" role="presentation">
-                  <button
+                  <Link
+                      href='/create'
                       className="nav2-link relative flex items-center whitespace-nowrap py-3 px-6 pe-8 text-jacarta-400 hover:text-jacarta-700 dark:hover:text-white"
-                      id="activity-tab"
-                      data-bs-toggle="tab"
-                      data-bs-target="#activity"
-                      type="button"
-                      role="tab"
-                      aria-controls="activity"
-                      aria-selected="false"
+                      // id="activity-tab"
+                      // data-bs-toggle="tab"
+                      // data-bs-target="#activity"
+                      // type="button"
+                      // role="tab"
+                      // aria-controls="activity"
+                      // aria-selected="false"
                   >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -180,9 +181,9 @@ export default function   Collcetions() {
                       <path d="M11.95 7.95l-1.414 1.414L8 6.828 8 20H6V6.828L3.465 9.364 2.05 7.95 7 3l4.95 4.95zm10 8.1L17 21l-4.95-4.95 1.414-1.414 2.537 2.536L16 4h2v13.172l2.536-2.536 1.414 1.414z" />
                     </svg>
                     <span className="font-display text-base font-medium">
-                Activity
+                Create New
               </span>
-                  </button>
+                  </Link>
                 </li>
               </ul>
 

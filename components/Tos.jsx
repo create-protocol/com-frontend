@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Tos() {
   return (
-    <section className="relative py-16 dark:bg-jacarta-800 md:py-24">
+    <section className="relative py-16 md:py-24">
       {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
       {/*  <Image*/}
       {/*    width={1920}*/}

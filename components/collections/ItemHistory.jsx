@@ -64,7 +64,7 @@ const chartsOptions = {
     tooltip: {
       usePointStyle: true,
       position: "nearest",
-      backgroundColor: "#131740",
+      backgroundColor: "#156F49",
       titleAlign: "center",
       bodyAlign: "center",
       footerAlign: "center",
@@ -109,7 +109,7 @@ export default function ItemHistory() {
     <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-white p-6 dark:border-[#4A4A4A]/90 dark:bg-[#4A4A4A]">
       {/* Period / Stats */}
       <div className="mb-10 flex flex-wrap items-center">
-        <select className="mr-8 min-w-[12rem] rounded-lg border-jacarta-100 py-3.5 text-sm dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white">
+        <select className="mr-8 min-w-[12rem] rounded-lg border-jacarta-100 py-3.5 text-sm dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white">
           {options.map((option, index) => (
             <option
               key={index}

@@ -64,7 +64,7 @@ const chartsOptions = {
     tooltip: {
       usePointStyle: true,
       position: "nearest",
-      backgroundColor: "#4A4A4A",
+      backgroundColor: "#156F49",
       titleAlign: "center",
       bodyAlign: "center",
       footerAlign: "center",
@@ -106,7 +106,7 @@ const chartData = {
 };
 export default function History() {
   return (
-    <div className="rounded-t-2lg rounded-b-2lg rounded-tl-none border border-jacarta-100 bg-[#000]/5 p-6 dark:border-[#156F49] dark:bg-[#4A4A4A]">
+    <div className="container mt-12 lg:mt-20 rounded-t-2lg rounded-b-2lg border border-jacarta-100 bg-[#000]/5 p-6 dark:border-[#156F49] dark:bg-[#4A4A4A]">
       {/* Period / Stats */}
       <div className="mb-10 flex flex-wrap items-center">
         <select className="mr-8 min-w-[12rem] rounded-lg border-jacarta-100 py-3.5 text-sm dark:border-[#156F49] focus:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white">

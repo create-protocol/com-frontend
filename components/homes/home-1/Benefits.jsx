@@ -34,13 +34,13 @@ export default function Benefits() {
                                             currentTabItem == elm ? "active" : ""
                                         }`}
                                     >
-                                        <Image
-                                            width={24}
-                                            height={24}
-                                            src={elm.imageIcon}
-                                            alt="icon"
-                                            className="rounded-[0.625rem] object-cover dark:bg-[#FFF]"
-                                        />
+                                        {/*<Image*/}
+                                        {/*    width={24}*/}
+                                        {/*    height={24}*/}
+                                        {/*    src={elm.imageIcon}*/}
+                                        {/*    alt="icon"*/}
+                                        {/*    className="rounded-[0.625rem] object-cover dark:bg-[#FFF]"*/}
+                                        {/*/>*/}
                                         {/*<svg*/}
                                         {/*    xmlns="http://www.w3.org/2000/svg"*/}
                                         {/*    viewBox="0 0 24 24"*/}

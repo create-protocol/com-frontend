@@ -45,7 +45,7 @@ const queryClient = new QueryClient();
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className='dark'>
       <body
         itemScope
         itemType="http://schema.org/WebPage"

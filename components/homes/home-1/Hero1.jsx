@@ -11,12 +11,12 @@ export default function Hero1() {
             {/*    alt="image"*/}
             {/*    className="absolute inset-0 -z-10 h-full w-full object-cover"*/}
             {/*/>*/}
-            <div className="ml-auto mr-auto h-full max-w-[91rem] px-4">
+            <div className="ml-auto mr-auto h-full max-w-[91rem] lg:max-w-[85rem] px-4">
                 <div className="grid h-full items-center gap-4 md:grid-cols-12">
                     <div
-                        className="col-span-5 flex h-full flex-col items-center justify-center py-10 md:items-start lg:py-20">
+                        className="col-span-6 flex h-full flex-col items-center justify-center py-10 md:items-start lg:py-20">
                         <h1 className="mb-6 text-center font-display text-3xl text-white md:text-left lg:text-4xl">
-                            Introducing the Create Protocol: Unleashing AI-Driven Creativity
+                            Introducing the Create Protocol: Revolutionizing AI-Driven Creativity
                         </h1>
                         <p className="mb-8 text-center text-lg text-white md:text-left">
                             The Create Protocol revolutionizes the digital creative landscape by introducing the
@@ -39,8 +39,9 @@ export default function Hero1() {
                             {/*</Link>*/}
                         </div>
                     </div>
-                    <div className="relative col-span-6 col-start-7 hidden h-full md:block">
-                        <div className="absolute bottom-[17%] left-12 animate-fly">
+                    <div className="relative col-span-6 col-start-7 hidden h-full md:flex items-center justify-center">
+                        <img src='/img/anim-logo.png' alt='anim' className='mt-12 lg:mt-20'/>
+                        <div className="absolute bottom-[20%] left-20 animate-fly">
                             <div
                                 className="flex items-center space-x-4 rounded-2lg bg-[#03b56a]/50 p-2.5 pr-6 pl-6 backdrop-blur-md">
                                 {/*<div className="-ml-6 flex h-12 w-12 items-center justify-center rounded-full bg-white">*/}

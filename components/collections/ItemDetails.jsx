@@ -319,7 +319,7 @@ export default function ItemDetails({id}) {
 
                             </div>
 
-                            <div className='h-full border border-solid border-jacarta-300 rounded-lg p-4'>
+                            <div className='h-full border border-solid border-[#000]/50 dark:border-jacarta-300 rounded-lg p-4'>
                                 <h2 className='text-md font-medium block text-[#03b56a] mb-4'>comments</h2>
                                 <div className='h-full max-h-72 overflow-y-auto'>
                                     {comments.map((elm,i) => (

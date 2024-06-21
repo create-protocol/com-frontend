@@ -38,7 +38,7 @@ export default function Create() {
         name: '',
         price: '',
         description: '',
-        file: null,
+        files: [],
     });
 
     const handleChange = (e) => {
@@ -72,7 +72,7 @@ export default function Create() {
             formData.name.trim() !== '' &&
             formData.price.trim() !== '' &&
             formData.description.trim() !== '' &&
-            formData.file !== null
+            formData.files.length !== 0
         );
     };
 
@@ -92,7 +92,7 @@ export default function Create() {
             <div className="container">
                 {/* Tabs Nav */}
                 <ul
-                    className="nav nav-tabs scrollbar-custom mb-12 flex items-center justify-start overflow-x-auto overflow-y-hidden border-b border-jacarta-100 pb-px dark:border-jacarta-600 md:justify-center"
+                    className="nav nav-tabs scrollbar-custom mb-4 flex items-center justify-start overflow-x-auto overflow-y-hidden border-b border-jacarta-100 pb-px dark:border-jacarta-600 md:justify-center"
                     role="tablist"
                 >
                     <li className="nav-item" role="presentation">
@@ -135,57 +135,64 @@ export default function Create() {
                         role="tabpanel"
                         aria-labelledby="create-new-com-tab"
                     >
-                        <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-                            Create
+                        <h1 className="py-12 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
+                            Make a new Creative Object Model
                         </h1>
                         <div className="mx-auto max-w-[48.125rem]">
                             {/* File Upload */}
-                            <FileUpload formData={formData} setFormData={setFormData}/>
+                            <div className='flex w-full justify-center'>
+                                <FileUpload formData={formData} setFormData={setFormData}/>
+
+                            </div>
+
+                            <div className='flex items-center lg:justify-between justify-center flex-col lg:flex-row'>
+                                <div className="mb-6 lg:w-[48%]">
+                                    <label
+                                        htmlFor="item-name"
+                                        className="mb-2 block font-display text-jacarta-700 dark:text-white"
+                                    >
+                                        Name<span className="text-red">*</span>
+                                    </label>
+                                    <input
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleChange}
+                                        type="text"
+                                        id="item-name"
+                                        className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-[#03b56a]/10 focus:ring-[#03b56a] dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white dark:placeholder:text-jacarta-300"
+                                        placeholder="Item name"
+                                        required
+                                    />
+                                </div>
+
+                                {/* External Link */}
+                                <div className="mb-6 lg:w-[48%] ">
+                                    <label
+                                        htmlFor="item-external-link"
+                                        className="mb-2 block font-display text-jacarta-700 dark:text-white"
+                                    >
+                                        Price<span className="text-red">*</span>
+                                    </label>
+                                    {/*<p className="mb-3 text-2xs dark:text-jacarta-300">*/}
+                                    {/*  We will include a link to this URL on this item's detail page, so*/}
+                                    {/*  that users can click to learn more about it. You are welcome to*/}
+                                    {/*  link to your own webpage with more details.*/}
+                                    {/*</p>*/}
+                                    <input
+                                        required
+                                        name="price"
+                                        value={formData.price}
+                                        onChange={handleChange}
+                                        type="text"
+                                        id="item-external-link"
+                                        className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-[#03b56a]/10 focus:ring-[#03b56a] dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white dark:placeholder:text-jacarta-300"
+                                        // placeholder="https://yoursite.io/item/123"
+                                    />
+                                </div>
+                            </div>
 
                             {/* Name */}
-                            <div className="mb-6">
-                                <label
-                                    htmlFor="item-name"
-                                    className="mb-2 block font-display text-jacarta-700 dark:text-white"
-                                >
-                                    Name<span className="text-red">*</span>
-                                </label>
-                                <input
-                                    name="name"
-                                    value={formData.name}
-                                    onChange={handleChange}
-                                    type="text"
-                                    id="item-name"
-                                    className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-[#03b56a]/10 focus:ring-[#03b56a] dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white dark:placeholder:text-jacarta-300"
-                                    placeholder="Item name"
-                                    required
-                                />
-                            </div>
 
-                            {/* External Link */}
-                            <div className="mb-6">
-                                <label
-                                    htmlFor="item-external-link"
-                                    className="mb-2 block font-display text-jacarta-700 dark:text-white"
-                                >
-                                    Price<span className="text-red">*</span>
-                                </label>
-                                {/*<p className="mb-3 text-2xs dark:text-jacarta-300">*/}
-                                {/*  We will include a link to this URL on this item's detail page, so*/}
-                                {/*  that users can click to learn more about it. You are welcome to*/}
-                                {/*  link to your own webpage with more details.*/}
-                                {/*</p>*/}
-                                <input
-                                    required
-                                    name="price"
-                                    value={formData.price}
-                                    onChange={handleChange}
-                                    type="text"
-                                    id="item-external-link"
-                                    className="w-full rounded-lg border-jacarta-100 py-3 hover:ring-2 hover:ring-[#03b56a]/10 focus:ring-[#03b56a] dark:border-jacarta-600 dark:bg-[#4A4A4A] dark:text-white dark:placeholder:text-jacarta-300"
-                                    // placeholder="https://yoursite.io/item/123"
-                                />
-                            </div>
 
                             {/* Description */}
                             <div className="mb-6">
@@ -212,13 +219,16 @@ export default function Create() {
                             </div>
 
                             {/* Submit */}
-                            <button
-                                onClick={handleSubmit}
-                                disabled={!isFormValid()}
-                                className="cursor-pointer rounded-full bg-[#03b56a] py-3 mt-6 px-8 text-center font-semibold text-white transition-all disabled:opacity-60 disabled:cursor-default"
-                            >
-                                Create
-                            </button>
+                            <div className='w-full flex justify-center'>
+                                <button
+                                    onClick={handleSubmit}
+                                    disabled={!isFormValid()}
+                                    className="cursor-pointer rounded-full bg-[#03b56a] py-3 mt-6 px-8 text-center font-semibold text-white transition-all disabled:opacity-60 disabled:cursor-default"
+                                >
+                                    Create
+                                </button>
+                            </div>
+
                         </div>
                     </div>
                     {/* end create tab */}
@@ -230,7 +240,7 @@ export default function Create() {
                         role="tabpanel"
                         aria-labelledby="merge-com-tab"
                     >
-                        <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
+                        <h1 className="py-12 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
                             Merge
                         </h1>
 
@@ -445,12 +455,14 @@ export default function Create() {
                             </div>
 
                             {/* Submit */}
+                            <div className='w-full flex justify-center'>
                             <button
                                 disabled
                                 className="cursor-default rounded-full bg-[#03b56a] py-3 mt-6 px-8 text-center font-semibold text-white transition-all disabled:opacity-60"
                             >
                                 Merge
                             </button>
+                            </div>
                         </div>
 
                     </div>
