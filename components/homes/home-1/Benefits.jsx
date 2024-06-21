@@ -82,7 +82,7 @@ export default function Benefits() {
                                         height={426}
                                         src={currentTabItem.img}
                                         alt="image"
-                                        className="rounded-full border border-jacarta-100 p-14 dark:border-jacarta-600"
+                                        className=" border border-jacarta-100 p-14 dark:border-jacarta-600"
                                     />
                                     <Image
                                         width={630}

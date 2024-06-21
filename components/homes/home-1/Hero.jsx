@@ -87,7 +87,7 @@ export default function Hero() {
             <div className="container h-full">
                 <div className="grid md:h-screen h-full items-center gap-4 md:grid-cols-12 md:pt-10">
                     <div
-                        className="col-span-6 lg:ml-[-76px] flex h-full flex-col items-center justify-center md:items-start md:pb-12 xl:col-span-4">
+                        className="home-text col-span-6 flex h-full flex-col items-center justify-center md:items-start md:pb-12 xl:col-span-4">
                         <h1 className="mb-4 text-center font-display text-3xl text-[#03b56a] md:text-left lg:text-4xl xl:text-5xl">
                             Evolving Digital IP, Democratized
                         </h1>

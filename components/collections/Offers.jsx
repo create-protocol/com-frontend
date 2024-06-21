@@ -52,7 +52,7 @@ export default function Offers() {
       {offers.map((elm, i) => (
         <div key={i} className="contents" role="row">
           <div
-            className="flex items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+            className="flex items-center whitespace-nowrap border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
             role="cell"
           >
             <span className="-ml-1" data-tippy-content={elm.currency}>
@@ -92,25 +92,25 @@ export default function Offers() {
             </span>
           </div>
           <div
-            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
             role="cell"
           >
             {elm.usdPrice}
           </div>
           <div
-            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
             role="cell"
           >
             {elm.difference}
           </div>
           <div
-            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
             role="cell"
           >
             {elm.expiration}
           </div>
           <div
-            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-jacarta-600"
+            className="flex items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
             role="cell"
           >
             {/*<Link href={`/user/${elm.id}`} className="text-accent">*/}

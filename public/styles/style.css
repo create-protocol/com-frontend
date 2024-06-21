@@ -251,6 +251,14 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
+.wallet-connect {
+  @apply bg-[#156F49];
+}
+
+.ju367v9i{
+  background: #156F49 !important;
+}
+
 .nav-link--style-2.active {
   @apply rounded-2.5xl border-b-0 bg-white shadow-2xl after:hidden dark:bg-[#4A4A4A];
 }

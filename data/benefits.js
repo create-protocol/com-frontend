@@ -3,7 +3,7 @@ export const benefits = [
     id: 1,
     title: "Film and Animation",
     imageIcon: "/img/film-icon.png",
-    img: "/img/dao/benefit_dao_1.jpg",
+    img: "/img/film.png",
     description:
       " COMs revolutionize character design, set creation, and special effects, equipping filmmakers and animators with tools to bring their visions to life with unprecedented realism and detail.",
     svgPath:
@@ -13,7 +13,7 @@ export const benefits = [
     id: 2,
     title: "Architecture and Construction",
     imageIcon: "/img/buildings.svg",
-    img: "/img/dao/benefit_dao_2.jpg",
+    img: "/img/art-design.png",
     description:
       "Architects and builders leverage COMs for accurate visualization of building designs, interior layouts, and urban planning, enabling more efficient and innovative structures.\n",
     svgPath:
@@ -23,7 +23,7 @@ export const benefits = [
     id: 3,
     title: "Gaming",
     imageIcon: "/img/gaming.png",
-    img: "/img/dao/benefit_dao_3.jpg",
+    img: "/img/content.png",
     description:
       " Interactive COMs enhance the immersive experience of video games by enabling the design of visually stunning characters, environments, and objects that adapt to player interactions.\n",
     svgPath:
@@ -33,7 +33,7 @@ export const benefits = [
     id: 4,
     title: "Fashion and Apparel",
     imageIcon: "/img/fashion.webp",
-    img: "/img/dao/benefit_dao_4.jpg",
+    img: "/img/fashion.png",
     description:
       "The fashion industry utilizes COMs for virtual garment prototyping, streamlining the design process and enabling more innovative and tailored clothing through realistic visualizations and fit analysis",
     svgPath:
@@ -43,7 +43,7 @@ export const benefits = [
     id: 5,
     title: "Retail and E-commerce",
     imageIcon: "/img/ecommerce.svg",
-    img: "/img/dao/benefit_dao_5.jpg",
+    img: "/img/music.png",
     description:
       " Platforms leverage COMs to offer virtual try-ons and realistic product visualizations, enhancing the online shopping experience and enabling customers to interact with products before purchasing",
     svgPath:
