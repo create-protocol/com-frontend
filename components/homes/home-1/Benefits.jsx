@@ -39,7 +39,7 @@ export default function Benefits() {
                                             height={24}
                                             src={elm.imageIcon}
                                             alt="icon"
-                                            className="rounded-[0.625rem] object-cover"
+                                            className="rounded-[0.625rem] object-cover dark:bg-[#FFF]"
                                         />
                                         {/*<svg*/}
                                         {/*    xmlns="http://www.w3.org/2000/svg"*/}
