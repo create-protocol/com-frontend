@@ -1,8 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function NewsLetter() {
+  const { t } = useTranslation();
   return (
     <section className="relative pb-24">
       {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
@@ -18,21 +20,20 @@ export default function NewsLetter() {
         <div className="lg:flex lg:items-center lg:justify-between">
           <div className=" lg:w-[45%] lg:pr-16">
             <h2 className="mb-6 font-display text-2xl text-jacarta-700 dark:text-white">
-              Sign up for The Tide, COM's newsletter!
+              {t("home").newsletter.title}
             </h2>
             <p className="mb-10 text-lg leading-normal dark:text-jacarta-300">
-              Join our mailing list to stay in the loop with our newest feature
-              releases, NFT drops, and tips and tricks for navigating COM
+              {t("home").newsletter.desc}
             </p>
 
             <form onSubmit={(e) => e.preventDefault()} className="relative">
               <input
                 type="email"
-                placeholder="Email address"
+                placeholder={t("home").newsletter.email}
                 className="w-full rounded-full border border-jacarta-100 py-3 px-4 focus:ring-[#03b56a] dark:border-jacarta-600 dark:bg-jacarta-700 dark:text-white dark:placeholder-white"
               />
               <button className="absolute top-2 right-2 rounded-full bg-[#03b56a] px-6 py-2 font-display text-sm text-white hover:bg-[#03b56a]/90">
-                Subscribe
+                {t("home").newsletter.subscribe}
               </button>
             </form>
           </div>

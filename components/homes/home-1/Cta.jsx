@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export default function Cta() {
+  const { t } = useTranslation();
   return (
     <section className="relative py-24">
       {/*<picture className="pointer-events-none absolute inset-0 -z-10 dark:hidden">*/}
@@ -27,12 +29,10 @@ export default function Cta() {
           <div className="mb-12 lg:w-1/2">
             <div className="rounded-2.5xl bg-white p-12 dark:bg-[#4A4A4A]">
               <h2 className="mb-5 font-display text-3xl text-jacarta-700 dark:text-white">
-                A global distributed community
+                {t("home").cta.card1.title}
               </h2>
               <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
-                We support the advancement of DAOs and decentralized governance
-                solutions in all geographies and industries. Be part of this
-                revolution.
+                {t("home").cta.card1.desc}
               </p>
               <div className="flex space-x-2">
                 <a
@@ -103,19 +103,18 @@ export default function Cta() {
           <div className="mb-12 lg:w-1/2">
             <div className="h-full rounded-2.5xl bg-white p-12 dark:bg-[#4A4A4A]">
               <h2 className="mb-5 font-display text-3xl text-jacarta-700 dark:text-white">
-                Express Partnership Interest
+                {t("home").cta.card2.title1}
                 <br />
-                Let’s chat.
+                {t("home").cta.card2.title2}
               </h2>
               <p className="mb-8 text-lg leading-normal dark:text-jacarta-300">
-                Our mission is to foster a diverse, open economy of transparent
-                cooperation.
+                {t("home").cta.card2.desc}
               </p>
               <a
                 href="/contact"
                 className="inline-block rounded-full bg-[#03b56a] py-3 px-8 text-center font-semibold text-white shadow-[#03b56a]-volume transition-all hover:bg-[#03b56a]s-dark"
               >
-                Get in Touch
+                {t("home").cta.card2.btn}
               </a>
             </div>
           </div>

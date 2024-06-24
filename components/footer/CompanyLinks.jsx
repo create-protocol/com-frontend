@@ -1,16 +1,19 @@
+"use client";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function CompanyLinks() {
-const menuItems=[
+  const { t } = useTranslation();
+  const menuItems = [
     {
-      href:'/about',
-      name:'Blog'
+      href: "/about",
+      name: t("footer1").companyLinks.blog,
     },
-  {
-    href:'/about',
-    name:'About'
-  },
-]
+    {
+      href: "/about",
+      name: t("footer1").companyLinks.about,
+    },
+  ];
 
   return (
     <>

@@ -1,7 +1,9 @@
 import { offers } from "@/data/itemDetails";
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export default function Offers() {
+  const { t } = useTranslation();
   return (
     <div
       role="table"
@@ -13,7 +15,7 @@ export default function Offers() {
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-            Price
+            {t("explore").offer.price}
           </span>
         </div>
         <div
@@ -21,7 +23,7 @@ export default function Offers() {
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-            USD Price
+            {t("explore").offer.usd}
           </span>
         </div>
         <div
@@ -29,7 +31,7 @@ export default function Offers() {
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-            Floor Difference
+            {t("explore").offer.floor}
           </span>
         </div>
         <div
@@ -37,7 +39,7 @@ export default function Offers() {
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-            Expiration
+            {t("explore").offer.expire}
           </span>
         </div>
         <div
@@ -45,7 +47,7 @@ export default function Offers() {
           role="columnheader"
         >
           <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-            From
+            {t("explore").offer.from}
           </span>
         </div>
       </div>
@@ -114,7 +116,7 @@ export default function Offers() {
             role="cell"
           >
             {/*<Link href={`/user/${elm.id}`} className="text-accent">*/}
-              {elm.user}
+            {elm.user}
             {/*</Link>*/}
           </div>
         </div>

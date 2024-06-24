@@ -3,8 +3,10 @@ import Properties from "./Properties";
 import Details from "./DetailsTab";
 import Activity from "./Activity";
 import ItemHistory from "./ItemHistory";
+import { useTranslation } from "react-i18next";
 
 export default function Tabs() {
+  const { t } = useTranslation();
   return (
     <div className="scrollbar-custom mt-14 overflow-x-auto rounded-lg">
       <div className="min-w-fit">
@@ -32,7 +34,9 @@ export default function Tabs() {
                 <path fill="none" d="M0 0h24v24H0z" />
                 <path d="M8 4h13v2H8V4zm-5-.5h3v3H3v-3zm0 7h3v3H3v-3zm0 7h3v3H3v-3zM8 11h13v2H8v-2zm0 7h13v2H8v-2z" />
               </svg>
-              <span className="font-display text-base font-medium">Offers</span>
+              <span className="font-display text-base font-medium">
+                {t("explore").tab.offer}
+              </span>
             </button>
           </li>
 
@@ -87,7 +91,7 @@ export default function Tabs() {
                 <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM7 6h4v4H7V6zm0 6h10v2H7v-2zm0 4h10v2H7v-2zm6-9h4v2h-4V7z" />
               </svg>
               <span className="font-display text-base font-medium">
-                Details & Use
+                {t("explore").tab.use}
               </span>
             </button>
           </li>
@@ -115,7 +119,7 @@ export default function Tabs() {
                 <path d="M11.95 7.95l-1.414 1.414L8 6.828 8 20H6V6.828L3.465 9.364 2.05 7.95 7 3l4.95 4.95zm10 8.1L17 21l-4.95-4.95 1.414-1.414 2.537 2.536L16 4h2v13.172l2.536-2.536 1.414 1.414z" />
               </svg>
               <span className="font-display text-base font-medium">
-                Activity
+                {t("explore").tab.activity}
               </span>
             </button>
           </li>
@@ -143,7 +147,7 @@ export default function Tabs() {
                 <path d="M5 3v16h16v2H3V3h2zm15.293 3.293l1.414 1.414L16 13.414l-3-2.999-4.293 4.292-1.414-1.414L13 7.586l3 2.999 4.293-4.292z" />
               </svg>
               <span className="font-display text-base font-medium">
-                Price History
+                {t("explore").tab.price}
               </span>
             </button>
           </li>

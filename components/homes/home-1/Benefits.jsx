@@ -1,102 +1,109 @@
 "use client";
-import {benefits} from "@/data/benefits";
+import { benefits } from "@/data/benefits";
 import Image from "next/image";
-import {useState} from "react";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Benefits() {
-    const [currentTabItem, setCurrentTabItem] = useState(benefits[0]);
-    return (
-        <section className="py-24 dark:bg-[#000]">
-            <div className="container">
-                <div className="mx-auto mb-12 max-w-xl text-center">
-                    <h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">
-                        Industries Revolutionized by Creative Object Models (COMs)
-                        {/*How can our platforms Benefit Users?*/}
-                    </h2>
-                    <p className="text-lg dark:text-jacarta-300">
-                        The Create Protocol empowers artists, creators, and innovators across diverse industries to
-                        build the platform they have always envisioned, providing the means to unleash their creativity
-                        and earn income through personalized, AI-driven digital experiences.
-                    </p>
-                </div>
-                <div className="lg:flex lg:flex-nowrap lg:space-x-10">
-                    <div className="lg:w-[43%]">
-                        <ul className="nav nav-tabs mb-12 space-y-2" role="tablist">
-                            {benefits.map((elm, i) => (
-                                <li
-                                    onClick={() => setCurrentTabItem(elm)}
-                                    key={i}
-                                    className="nav-item"
-                                    role="presentation"
-                                >
-                                    <button
-                                        className={`nav-link nav-link--style-2 items-start gap-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600 ${
-                                            currentTabItem == elm ? "active" : ""
-                                        }`}
-                                    >
-                                        {/*<Image*/}
-                                        {/*    width={24}*/}
-                                        {/*    height={24}*/}
-                                        {/*    src={elm.imageIcon}*/}
-                                        {/*    alt="icon"*/}
-                                        {/*    className="rounded-[0.625rem] object-cover dark:bg-[#FFF]"*/}
-                                        {/*/>*/}
-                                        {/*<svg*/}
-                                        {/*    xmlns="http://www.w3.org/2000/svg"*/}
-                                        {/*    viewBox="0 0 24 24"*/}
-                                        {/*    width="24"*/}
-                                        {/*    height="24"*/}
-                                        {/*    className="mr-2 h-8 w-8 flex-shrink-0 fill-[#03b56a]"*/}
-                                        {/*>*/}
-                                        {/*    <path fill="none" d="M0 0h24v24H0z"/>*/}
-                                        {/*    <path d={elm.svgPath}/>*/}
-                                        {/*</svg>*/}
+  const { t } = useTranslation();
+  // console.log(benefits[0]);
+  // console.log(t("home").benefits.benefitDesc[0]);
+  const [currentTabItem, setCurrentTabItem] = useState(
+    benefits[0]
+    // t("home").benefits.benefitDesc[0]
+  );
+  return (
+    <section className="py-24 dark:bg-[#000]">
+      <div className="container">
+        <div className="mx-auto mb-12 max-w-xl text-center">
+          <h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">
+            {t("home").benefits.title}
+            {/*How can our platforms Benefit Users?*/}
+          </h2>
+          <p className="text-lg dark:text-jacarta-300">
+            {t("home").benefits.desc}
+          </p>
+        </div>
+        <div className="lg:flex lg:flex-nowrap lg:space-x-10">
+          <div className="lg:w-[43%]">
+            <ul className="nav nav-tabs mb-12 space-y-2" role="tablist">
+              {benefits.map((elm, i) => (
+                // {t("home").benefits.benefitDesc.map((elm, i) => (
+                <li
+                  onClick={() => {
+                    setCurrentTabItem(elm);
+                  }}
+                  key={i}
+                  className="nav-item"
+                  role="presentation"
+                >
+                  <button
+                    className={`nav-link nav-link--style-2 items-start gap-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600 ${
+                      currentTabItem == elm ? "active" : ""
+                    }`}
+                  >
+                    {/*<Image*/}
+                    {/*    width={24}*/}
+                    {/*    height={24}*/}
+                    {/*    src={elm.imageIcon}*/}
+                    {/*    alt="icon"*/}
+                    {/*    className="rounded-[0.625rem] object-cover dark:bg-[#FFF]"*/}
+                    {/*/>*/}
+                    {/*<svg*/}
+                    {/*    xmlns="http://www.w3.org/2000/svg"*/}
+                    {/*    viewBox="0 0 24 24"*/}
+                    {/*    width="24"*/}
+                    {/*    height="24"*/}
+                    {/*    className="mr-2 h-8 w-8 flex-shrink-0 fill-[#03b56a]"*/}
+                    {/*>*/}
+                    {/*    <path fill="none" d="M0 0h24v24H0z"/>*/}
+                    {/*    <path d={elm.svgPath}/>*/}
+                    {/*</svg>*/}
 
-                                        <div>
-                      <span
-                          className=" block font-display text-xl font-medium group-hover:text-[#03b56a] dark:text-white">
+                    <div>
+                      <span className=" block font-display text-xl font-medium group-hover:text-[#03b56a] dark:text-white">
                         {elm.title}
                       </span>
-                                            <div className="nav-link-content hidden">
-                                                <p className="text-jacarta-500 dark:text-jacarta-300">
-                                                    {elm.description}
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </button>
-                                </li>
-                            ))}
-                        </ul>
+                      <div className="nav-link-content hidden">
+                        <p className="text-jacarta-500 dark:text-jacarta-300">
+                          {elm.description}
+                        </p>
+                      </div>
                     </div>
-                    <div className="flex items-center justify-center overflow-hidden lg:w-[57%] lg:overflow-visible">
-                        <div className="tab-content flex-1">
-                            <div
-                                className="tab-pane fade show active relative"
-                                id="ownership"
-                                role="tabpanel"
-                                aria-labelledby="ownership-tab"
-                            >
-                                <figure className="flex items-center justify-center">
-                                    <Image
-                                        width={426}
-                                        height={426}
-                                        src={currentTabItem.img}
-                                        alt="image"
-                                        className=" border border-jacarta-100 p-14 dark:border-jacarta-600"
-                                    />
-                                    <Image
-                                        width={630}
-                                        height={594}
-                                        src="/img/dao/3d_elements_circle.png"
-                                        alt="image"
-                                        className="absolute animate-spin-slow"
-                                    />
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="flex items-center justify-center overflow-hidden lg:w-[57%] lg:overflow-visible">
+            <div className="tab-content flex-1">
+              <div
+                className="tab-pane fade show active relative"
+                id="ownership"
+                role="tabpanel"
+                aria-labelledby="ownership-tab"
+              >
+                <figure className="flex items-center justify-center">
+                  <Image
+                    width={426}
+                    height={426}
+                    src={currentTabItem.img}
+                    alt="image"
+                    className=" border border-jacarta-100 p-14 dark:border-jacarta-600"
+                  />
+                  <Image
+                    width={630}
+                    height={594}
+                    src="/img/dao/3d_elements_circle.png"
+                    alt="image"
+                    className="absolute animate-spin-slow"
+                  />
+                </figure>
+              </div>
             </div>
-        </section>
-    );
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

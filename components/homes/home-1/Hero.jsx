@@ -99,23 +99,23 @@ export default function Hero() {
         <div className="grid md:h-screen h-full items-center gap-4 md:grid-cols-12 md:pt-10">
           <div className="home-text col-span-6 flex h-full flex-col items-center justify-center md:items-start md:pb-12 xl:col-span-4">
             <h1 className="mb-4 text-center font-display text-3xl text-[#03b56a] md:text-left lg:text-4xl xl:text-5xl">
-              {t("title")}
+              {t("home").hero.title}
             </h1>
             <p className="mb-8 text-center text-md dark:text-jacarta-200 md:text-left">
-              Redefine ownership through AI-driven Creative Object Models.
+              {t("home").hero.desc}
             </p>
             <div className="flex space-x-4">
               <Link
                 href="/create"
                 className=" rounded-full bg-[#03b56a] py-3 px-6 text-center font-semibold text-white  transition-all hover:bg-[#029e57] disabled:opacity-0.7 disabled:pointer-events-none"
               >
-                Start building
+                {t("home").hero.strtBtn}
               </Link>
               <Link
                 href="/explore"
                 className=" rtl:!mr-6 w-36 rounded-full bg-white py-3 px-8 text-center font-semibold text-[#03b56a] shadow-white-volume hover:shadow-none transition-all hover:bg-[#029e57] hover:text-white"
               >
-                Explore
+                {t("home").hero.explore}
               </Link>
             </div>
           </div>

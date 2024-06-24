@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const blockChainOptions = ["Ethereum", "Polygon", "Flow", "Tezos"];
 const categories = [
@@ -26,6 +27,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function Ranking() {
+  const { t } = useTranslation();
   const [activeBlockchainOption, setActiveBlockchainOption] = useState(
     blockChainOptions[0]
   );
@@ -44,7 +46,7 @@ export default function Ranking() {
       {/*</picture>*/}
       <div className="container">
         <h1 className="py-16 text-center font-display text-4xl font-medium text-jacarta-700 dark:text-white">
-          Rankings
+          {t("network").ranking.ranking}
         </h1>
 
         {/* Filters */}
@@ -236,12 +238,12 @@ export default function Ranking() {
             >
               <div className="w-[28%] py-3 px-4" role="columnheader">
                 <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-                  Collection
+                  {t("network").ranking.table.collection}
                 </span>
               </div>
               <div className="w-[12%] py-3 px-4" role="columnheader">
                 <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-                  Volume
+                  {t("network").ranking.table.volume}
                 </span>
               </div>
               <div className="w-[12%] py-3 px-4" role="columnheader">
@@ -256,17 +258,17 @@ export default function Ranking() {
               </div>
               <div className="w-[12%] py-3 px-4" role="columnheader">
                 <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-                  Floor Price
+                  {t("network").ranking.table.floor}
                 </span>
               </div>
               <div className="w-[12%] py-3 px-4" role="columnheader">
                 <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-                  Owners
+                  {t("network").ranking.table.owner}
                 </span>
               </div>
               <div className="w-[12%] py-3 px-4" role="columnheader">
                 <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-                  Items
+                  {t("network").ranking.table.items}
                 </span>
               </div>
             </div>
@@ -287,7 +289,7 @@ export default function Ranking() {
                     <Image
                       width={40}
                       height={40}
-                      src={'/img/ai-icon.jpeg'}
+                      src={"/img/ai-icon.jpeg"}
                       alt="avatar 1"
                       className="rounded-2lg"
                       loading="lazy"

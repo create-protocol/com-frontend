@@ -15,10 +15,11 @@ import { useAccount } from "wagmi";
 import { manageComs } from "@/data/menu";
 import { usePathname } from "next/navigation";
 import LanguageSelector from "./languageSelector";
+import { useTranslation } from "react-i18next";
 
 export default function Header1() {
   const { address, isConnecting, isReconnecting } = useAccount();
-
+  const { t } = useTranslation();
   const pathname = usePathname();
   const isActiveParentMenu = (menus) => {
     return menus.some(
@@ -90,7 +91,7 @@ export default function Header1() {
             <input
               type="search"
               className="w-full rounded-2xl border border-jacarta-100 py-[0.6875rem] px-4 pl-10 text-jacarta-700 placeholder-jacarta-500 focus:ring-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
-              placeholder="Search"
+              placeholder={t("nav").search}
             />
             <span className="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
               <svg
@@ -166,7 +167,7 @@ export default function Header1() {
               <input
                 type="search"
                 className="w-full rounded-2xl border border-jacarta-100 py-3 px-4 pl-10 text-jacarta-700 placeholder-jacarta-500 focus:ring-[#03b56a] dark:border-transparent dark:bg-white/[.15] dark:text-white dark:placeholder-white"
-                placeholder="Search"
+                placeholder={t("nav").search}
               />
               <span className="absolute left-0 top-0 flex h-full w-12 items-center justify-center rounded-2xl">
                 <svg
@@ -191,7 +192,7 @@ export default function Header1() {
 
             {/* Mobile Connect Wallet / Socials */}
             <div className=" w-full lg:hidden mt-4">
-              <ConnectButton />
+              <ConnectButton label={t("nav").connect} />
 
               <hr className="my-5 h-px border-0 bg-jacarta-100 dark:bg-jacarta-600" />
             </div>
@@ -209,7 +210,7 @@ export default function Header1() {
                           : "text-[#4A4A4A] dark:text-white"
                       }  hover:text-[#03b56a] focus:text-[#03b56a] dark:hover:text-[#03b56a] dark:focus:text-[#03b56a] lg:px-3`}
                     >
-                      Settings
+                      {t("nav").settings}
                     </Link>
                   </li>
                   <li className="js-nav-dropdown group relative">
@@ -225,7 +226,7 @@ export default function Header1() {
                       role="button"
                       data-bs-toggle="dropdown"
                     >
-                      Manage
+                      {t("nav").manage}
                       <i className="lg:hidden">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +267,7 @@ export default function Header1() {
                 </ul>
               )}
               {/* Wallet */}
-              <ConnectButton />
+              <ConnectButton label={t("nav").connect} />
 
               {/* Profile */}
               {/*<Profile />*/}

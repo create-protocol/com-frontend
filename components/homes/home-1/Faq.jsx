@@ -3,32 +3,32 @@
 import Image from "next/image";
 import { useState } from "react";
 import ModalVideo from "react-modal-video";
+import { useTranslation } from "react-i18next";
 
 export default function Faq() {
   const [isOpen, setIsOpen] = useState(false);
-  const url = `https://www.youtube.com/embed/q2pqwUmyA2M`
+  const { t } = useTranslation();
+  const url = `https://www.youtube.com/embed/q2pqwUmyA2M`;
   return (
     <section className="bg-light-base py-24 dark:bg-[#000]">
       <div className="container">
         <div className="mx-auto mb-12 max-w-xl text-center">
           <h2 className="mb-6 text-center font-display text-3xl font-medium text-jacarta-700 dark:text-white">
-            Why Creative Objective Models?
+            {t("home").faq.title}
           </h2>
-          <p className="text-lg dark:text-jacarta-300">
-            COMs can be used to represent items such as photos, videos, audio, and other types of digital files.
-          </p>
+          <p className="text-lg dark:text-jacarta-300">{t("home").faq.desc}</p>
         </div>
         <div className="lg:flex lg:flex-nowrap justify-center">
-          <div className='flex justify-center w-full'>
+          <div className="flex justify-center w-full">
             <iframe
-                className='lg:w-3/4 w-4/5'
-                // width="560"
-                height="315"
-                src={url}
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                title="YouTube Video"
+              className="lg:w-3/4 w-4/5"
+              // width="560"
+              height="315"
+              src={url}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              title="YouTube Video"
             ></iframe>
             {/*<figure className="relative mb-8 overflow-hidden rounded-3xl before:absolute before:inset-0 before:bg-jacarta-900/25">*/}
             {/*  <div*/}

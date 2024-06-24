@@ -2,10 +2,12 @@
 import { activity } from "@/data/itemDetails";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Activity() {
   const [filterAction, setfilterAction] = useState();
   const [filteredItems, setFilteredItems] = useState(activity);
+  const { t } = useTranslation();
   useEffect(() => {
     if (filterAction) {
       setFilteredItems(activity.filter((elm) => elm.action == filterAction));
@@ -14,6 +16,27 @@ export default function Activity() {
     }
   }, [filterAction]);
 
+  const activityType = [
+    {
+      value: t("explore").activity.listing,
+      name: "",
+    },
+    {
+      value: t("explore").activity.bid,
+      name: "Bid",
+      svgPath: `M14 20v2H2v-2h12zM14.586.686l7.778 7.778L20.95 9.88l-1.06-.354L17.413 12l5.657 5.657-1.414 1.414L16 13.414l-2.404 2.404.283 1.132-1.415 1.414-7.778-7.778 1.415-1.414 1.13.282 6.294-6.293-.353-1.06L14.586.686zm.707 3.536l-7.071 7.07 3.535 3.536 7.071-7.07-3.535-3.536z`,
+    },
+    {
+      value: t("explore").activity.transfer,
+      name: "Transfer",
+      svgPath: `M16.05 12.05L21 17l-4.95 4.95-1.414-1.414 2.536-2.537L4 18v-2h13.172l-2.536-2.536 1.414-1.414zm-8.1-10l1.414 1.414L6.828 6 20 6v2H6.828l2.536 2.536L7.95 11.95 3 7l4.95-4.95z`,
+    },
+    {
+      value: t("explore").activity.sale,
+      name: "Sale",
+      svgPath: `M6.5 2h11a1 1 0 0 1 .8.4L21 6v15a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6l2.7-3.6a1 1 0 0 1 .8-.4zM19 8H5v12h14V8zm-.5-2L17 4H7L5.5 6h13zM9 10v2a3 3 0 0 0 6 0v-2h2v2a5 5 0 0 1-10 0v-2h2z`,
+    },
+  ];
   return (
     <>
       <div className=" border border-b-0 border-jacarta-100 bg-light-base px-4 pt-5 pb-2.5 dark:border-[#156F49] dark:bg-[#4A4A4A]">
@@ -41,19 +64,19 @@ export default function Activity() {
                 !filterAction ? "text-white" : ""
               } `}
             >
-              Listing
+              {activityType[0].value}
             </span>
           </button>
 
-          {activity.map((elm, i) => (
+          {activityType.map((elm, i) => (
             <button
               key={i}
-              onClick={() => setfilterAction(elm.action)}
-              className={
-                filterAction == elm.action
+              onClick={() => setfilterAction(elm.name)}
+              className={` ${
+                filterAction == elm.name
                   ? "mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-transparent bg-[#03b56a] px-4 py-3 hover:bg-[#03b56a]-dark dark:hover:bg-[#03b56a]-dark fill-white"
-                  : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white "
-              }
+                  : "group mr-2.5 mb-2.5 inline-flex items-center rounded-xl border border-jacarta-100 bg-white px-4 py-3 hover:border-transparent hover:bg-[#03b56a] hover:text-white dark:border-[#156F49] dark:bg-[#4A4A4A] dark:text-white dark:hover:border-transparent dark:hover:bg-[#03b56a] hover:fill-white dark:fill-white"
+              } ${i == 0 ? "hidden" : ""}`}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -67,10 +90,10 @@ export default function Activity() {
               </svg>
               <span
                 className={`text-2xs font-medium ${
-                  filterAction == elm.action ? "text-white" : ""
+                  filterAction == elm.name ? "text-white" : ""
                 } `}
               >
-                {elm.action}
+                {elm.value}
               </span>
             </button>
           ))}
@@ -87,27 +110,27 @@ export default function Activity() {
         >
           <div className="w-[17%] py-2 px-4" role="columnheader">
             <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-              Event
+              {t("explore").activity.table.event}
             </span>
           </div>
           <div className="w-[17%] py-2 px-4" role="columnheader">
             <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-              Price
+              {t("explore").activity.table.price}
             </span>
           </div>
           <div className="w-[22%] py-2 px-4" role="columnheader">
             <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-              From
+              {t("explore").activity.table.from}
             </span>
           </div>
           <div className="w-[22%] py-2 px-4" role="columnheader">
             <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-              To
+              {t("explore").activity.table.to}
             </span>
           </div>
           <div className="w-[22%] py-2 px-4" role="columnheader">
             <span className="w-full overflow-hidden text-ellipsis text-jacarta-700 dark:text-jacarta-100">
-              Date
+              {t("explore").activity.table.date}
             </span>
           </div>
         </div>
@@ -173,17 +196,13 @@ export default function Activity() {
               className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
-              <span className="text-[#03b56a]">
-                {elm.user}
-              </span>
+              <span className="text-[#03b56a]">{elm.user}</span>
             </div>
             <div
               className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
               role="cell"
             >
-              <span className="text-[#03b56a]">
-                {elm.token}
-              </span>
+              <span className="text-[#03b56a]">{elm.token}</span>
             </div>
             <div
               className="flex w-[22%] items-center border-t border-jacarta-100 py-4 px-4 dark:border-[#156F49]"
