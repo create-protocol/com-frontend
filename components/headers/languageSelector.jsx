@@ -4,6 +4,7 @@ export default function LanguageSelector() {
   const languages = [
     { name: "English", code: "en" },
     { name: "Thai", code: "th" },
+    { name: "Japanese", code: "ja" },
   ];
   const changeLanguage = (code) => {
     i18n.changeLanguage(code);
