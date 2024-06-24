@@ -41,55 +41,55 @@ export const th = {
       benefitDesc: [
         {
           id: 1,
-          title: "Film and Animation",
+          title: "ภาพยนตร์และแอนิเมชั่น",
           imageIcon: "/img/film-icon.png",
           img: "/img/film.png",
           description:
-            " COMs revolutionize character design, set creation, and special effects, equipping filmmakers and animators with tools to bring their visions to life with unprecedented realism and detail.",
+              "COMs ปฏิวัติการออกแบบตัวละคร การสร้างฉาก และเอฟเฟกต์พิเศษ โดยให้เครื่องมือแก่ผู้สร้างภาพยนตร์และแอนิเมเตอร์ในการทำให้วิสัยทัศน์ของพวกเขามีชีวิตชีวาขึ้นด้วยความสมจริงและรายละเอียดที่ไม่เคยมีมาก่อน",
           svgPath:
-            "M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z",
+              "M17 15.245v6.872a.5.5 0 0 1-.757.429L12 20l-4.243 2.546a.5.5 0 0 1-.757-.43v-6.87a8 8 0 1 1 10 0zM12 15a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm0-2a4 4 0 1 1 0-8 4 4 0 0 1 0 8z",
         },
         {
           id: 2,
-          title: "Digital Art and Design",
+          title: "ศิลปะดิจิทัลและการออกแบบ",
           imageIcon: "/img/buildings.svg",
           img: "/img/art-design.png",
           description:
-            "Envision a future where artworks are not static canvases but living, evolving masterpieces that change and adapt to the viewer's interactions, offering a truly immersive and personalized experience.",
+              "นึกถึงอนาคตที่งานศิลปะไม่ได้เป็นเพียงผืนผ้าใบที่นิ่ง แต่เป็นผลงานชิ้นเอกที่มีชีวิตและพัฒนาไปตามการมีปฏิสัมพันธ์ของผู้ชม มอบประสบการณ์ที่แท้จริงและเป็นส่วนตัว",
           svgPath:
-            "M21 2.992v18.016a1 1 0 0 1-.993.992H3.993A.993.993 0 0 1 3 21.008V2.992A1 1 0 0 1 3.993 2h16.014c.548 0 .993.444.993.992zm-9.707 10.13l-2.475-2.476-1.414 1.415 3.889 3.889 5.657-5.657-1.414-1.414-4.243 4.242z",
+              "M21 2.992v18.016a1 1 0 0 1-.993.992H3.993A.993.993 0 0 1 3 21.008V2.992A1 1 0 0 1 3.993 2h16.014c.548 0 .993.444.993.992zm-9.707 10.13l-2.475-2.476-1.414 1.415 3.889 3.889 5.657-5.657-1.414-1.414-4.243 4.242z",
         },
         {
           id: 3,
-          title: "Gaming",
+          title: "การเล่นเกม",
           imageIcon: "/img/gaming.png",
           img: "/img/content.png",
           description:
-            " Interactive COMs enhance the immersive experience of video games by enabling the design of visually stunning characters, environments, and objects that adapt to player interactions.\n",
+              "COMs แบบโต้ตอบช่วยเพิ่มประสบการณ์การเล่นเกมโดยการออกแบบตัวละคร สิ่งแวดล้อม และวัตถุที่สวยงามที่สามารถปรับตัวตามการโต้ตอบของผู้เล่น",
           svgPath:
-            "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.96 9.96 0 0 1-6.383-2.302l-.244-.209.902-1.902a8 8 0 1 0-2.27-5.837l-.005.25h2.5l-2.706 5.716A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2zm1 4v2h2.5v2H10a.5.5 0 0 0-.09.992L10 11h4a2.5 2.5 0 1 1 0 5h-1v2h-2v-2H8.5v-2H14a.5.5 0 0 0 .09-.992L14 13h-4a2.5 2.5 0 1 1 0-5h1V6h2z",
+              "M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10a9.96 9.96 0 0 1-6.383-2.302l-.244-.209.902-1.902a8 8 0 1 0-2.27-5.837l-.005.25h2.5l-2.706 5.716A9.954 9.954 0 0 1 2 12C2 6.477 6.477 2 12 2zm1 4v2h2.5v2H10a.5.5 0 0 0-.09.992L10 11h4a2.5 2.5 0 1 1 0 5h-1v2h-2v-2H8.5v-2H14a.5.5 0 0 0 .09-.992L14 13h-4a2.5 2.5 0 1 1 0-5h1V6h2z",
         },
         {
           id: 4,
-          title: "Fashion and Apparel",
+          title: "แฟชั่นและเครื่องแต่งกาย",
           imageIcon: "/img/fashion.webp",
           img: "/img/fashion.png",
           description:
-            "The fashion industry utilizes COMs for virtual garment prototyping, streamlining the design process and enabling more innovative and tailored clothing through realistic visualizations and fit analysis",
+              "อุตสาหกรรมแฟชั่นใช้ COMs สำหรับการสร้างต้นแบบเสื้อผ้าเสมือนจริง ทำให้กระบวนการออกแบบมีความคล่องตัวและช่วยให้การสร้างเสื้อผ้าที่เป็นนวัตกรรมใหม่และเหมาะสมมากขึ้นผ่านการแสดงผลและการวิเคราะห์ความพอดีที่สมจริง",
           svgPath:
-            "M5.636 6.636L12 .272l6.364 6.364a9 9 0 1 1-12.728 0zM13 11V6.5L8.5 13H11v4.5l4.5-6.5H13z",
+              "M5.636 6.636L12 .272l6.364 6.364a9 9 0 1 1-12.728 0zM13 11V6.5L8.5 13H11v4.5l4.5-6.5H13z",
         },
         {
           id: 5,
-          title: "Music Production",
+          title: "การผลิตเพลง",
           imageIcon: "/img/ecommerce.svg",
           img: "/img/music.png",
           description:
-            "Imagine music tracks that seamlessly morph and evolve based on listener preferences, time of day, or environmental factors, creating a uniquely tailored auditory experience.",
+              "จินตนาการถึงเพลงที่เปลี่ยนแปลงและพัฒนาอย่างราบรื่นตามความชอบของผู้ฟัง เวลาในแต่ละวัน หรือปัจจัยสิ่งแวดล้อม ทำให้เกิดประสบการณ์การฟังที่ไม่ซ้ำใคร",
           svgPath:
-            "M6.75 2.5A4.25 4.25 0 0 1 11 6.75V11H6.75a4.25 4.25 0 1 1 0-8.5zm0 10.5H11v4.25A4.25 4.25 0 1 1 6.75 13zm10.5-10.5a4.25 4.25 0 1 1 0 8.5H13V6.75a4.25 4.25 0 0 1 4.25-4.25zM13 13h4.25A4.25 4.25 0 1 1 13 17.25V13z",
+              "M6.75 2.5A4.25 4.25 0 0 1 11 6.75V11H6.75a4.25 4.25 0 1 1 0-8.5zm0 10.5H11v4.25A4.25 4.25 0 1 1 6.75 13zm10.5-10.5a4.25 4.25 0 1 1 0 8.5H13V6.75a4.25 4.25 0 0 1 4.25-4.25zM13 13h4.25A4.25 4.25 0 1 1 13 17.25V13z",
         },
-      ],
+      ]
     },
     faq: {
       title: "เหตุใดจึงต้องมีโมเดลวัตถุประสงค์เชิงสร้างสรรค์",

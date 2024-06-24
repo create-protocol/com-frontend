@@ -7,11 +7,13 @@ import { useTranslation } from "react-i18next";
 export default function Benefits() {
   const { t } = useTranslation();
   // console.log(benefits[0]);
-  // console.log(t("home").benefits.benefitDesc[0]);
+  // console.log('data---',t("home").benefits.benefitDesc);
   const [currentTabItem, setCurrentTabItem] = useState(
-    benefits[0]
-    // t("home").benefits.benefitDesc[0]
+    // benefits[0]
+    t("home").benefits.benefitDesc[0]
   );
+
+  console.log('currentTabItem--',currentTabItem)
   return (
     <section className="py-24 dark:bg-[#000]">
       <div className="container">
@@ -27,8 +29,8 @@ export default function Benefits() {
         <div className="lg:flex lg:flex-nowrap lg:space-x-10">
           <div className="lg:w-[43%]">
             <ul className="nav nav-tabs mb-12 space-y-2" role="tablist">
-              {benefits.map((elm, i) => (
-                // {t("home").benefits.benefitDesc.map((elm, i) => (
+               {/*{benefits.map((elm, i) => (*/}
+               {t("home").benefits.benefitDesc.map((elm, i) => (
                 <li
                   onClick={() => {
                     setCurrentTabItem(elm);
@@ -39,7 +41,7 @@ export default function Benefits() {
                 >
                   <button
                     className={`nav-link nav-link--style-2 items-start gap-2 group relative flex w-full border-b border-jacarta-100 p-6 text-left dark:border-jacarta-600 ${
-                      currentTabItem == elm ? "active" : ""
+                      currentTabItem.id == elm.id ? "active" : ""
                     }`}
                   >
                     {/*<Image*/}

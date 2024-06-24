@@ -58,7 +58,7 @@ export default function Header1() {
             : ""
         }`}
       >
-        <div className="flex items-center px-6 py-6 xl:px-24 gap-6">
+        <div className="flex items-center px-6 py-6 xl:px-12 xxl:px-24 gap-6">
           {/* Logo */}
           <Link
             href="/"
