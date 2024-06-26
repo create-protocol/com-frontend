@@ -76,7 +76,7 @@ export default function Nav() {
       </li>
       {address && !isConnecting && !isReconnecting && (
         <>
-          <li className="group lg:hidden">
+          {/* <li className="group lg:hidden">
             <Link
               href="/manage"
               className={`flex items-center justify-between py-3.5 font-display text-base  ${
@@ -87,7 +87,7 @@ export default function Nav() {
             >
               {t("nav").settings}
             </Link>
-          </li>
+          </li> */}
           <li className="js-nav-dropdown group relative lg:hidden">
             <a
               href="/manage"
