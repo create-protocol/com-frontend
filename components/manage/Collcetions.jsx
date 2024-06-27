@@ -276,7 +276,7 @@ export default function Collcetions() {
                 </Link>
               </li> */}
               </ul>
-              <button className="flex items-center justify-center whitespace-nowrap rounded-full bg-[#03b56a] py-3 px-6 text-center font-semibold text-white  transition-all hover:bg-[#029e57] disabled:opacity-0.7 disabled:pointer-events-none w-[100%] h-10">
+              <a href="/create" className="flex items-center justify-center whitespace-nowrap rounded-full bg-[#03b56a] py-3 px-6 text-center font-semibold text-white  transition-all hover:bg-[#029e57] disabled:opacity-0.7 disabled:pointer-events-none w-[100%] h-10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -313,7 +313,7 @@ export default function Collcetions() {
                 <span className=" font-body text-base font-normal">
                   Create New
                 </span>
-              </button>
+              </a>
             </div>
 
 
