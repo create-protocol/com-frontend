@@ -202,7 +202,7 @@ export default function Header1() {
               {address && !isConnecting && !isReconnecting && (
                 <ul className="flex flex-col lg:flex-row">
                   <li className="group">
-                    <Link
+                    {/* <Link
                       href="/manage"
                       className={`flex items-center justify-between py-3.5 font-display text-base  ${
                         "/settings".split("/")[1] == pathname.split("/")[1]
@@ -211,7 +211,7 @@ export default function Header1() {
                       }  hover:text-[#03b56a] focus:text-[#03b56a] dark:hover:text-[#03b56a] dark:focus:text-[#03b56a] lg:px-3`}
                     >
                       {t("nav").settings}
-                    </Link>
+                    </Link> */}
                   </li>
                   <li className="js-nav-dropdown group relative">
                     <a
