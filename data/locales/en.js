@@ -137,6 +137,10 @@ export const en = {
       all: "All",
       art: "Art",
       com: "COMs",
+      music: "Music",
+      fashion: "Fashion",
+      gaming: "Gaming",
+      film: "Film",
     },
     by: "by",
     item: {

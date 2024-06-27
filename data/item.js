@@ -195,6 +195,8 @@ export const useritems = [
     price: "8.49 ETH",
     bidCount: "2/8",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 15,
@@ -206,6 +208,8 @@ export const useritems = [
     price: "0.078 ETH",
     bidCount: "1/3",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 16,
@@ -217,6 +221,8 @@ export const useritems = [
     price: "0.16 ETH",
     bidCount: "1/1",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 17,
@@ -228,6 +234,8 @@ export const useritems = [
     price: "10 ETH",
     bidCount: "2/3",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 18,
@@ -239,6 +247,8 @@ export const useritems = [
     price: "5.9 ETH",
     bidCount: "1/7",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 19,
@@ -251,6 +261,8 @@ export const useritems = [
     price: "0.13 ETH",
     bidCount: "1/1",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 20,
@@ -262,6 +274,8 @@ export const useritems = [
     price: "From 5 FLOW",
     bidCount: "1/1",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 21,
@@ -275,6 +289,8 @@ export const useritems = [
     price: "0.8 ETH",
     bidCount: "1/1",
     type: "onsale",
+
+    liked: false,
   },
   {
     id: 22,
@@ -286,6 +302,8 @@ export const useritems = [
     price: "8.49 ETH",
     bidCount: "2/8",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 23,
@@ -299,6 +317,8 @@ export const useritems = [
     price: "0.8 ETH",
     bidCount: "1/1",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 24,
@@ -310,6 +330,8 @@ export const useritems = [
     price: "10 ETH",
     bidCount: "2/3",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 25,
@@ -321,6 +343,8 @@ export const useritems = [
     price: "5.9 ETH",
     bidCount: "1/7",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 26,
@@ -332,6 +356,8 @@ export const useritems = [
     price: "0.1677 ETH",
     bidCount: "1/1",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 27,
@@ -343,6 +369,8 @@ export const useritems = [
     price: "0.078 ETH",
     bidCount: "1/3",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 28,
@@ -354,6 +382,8 @@ export const useritems = [
     price: "From 5 FLOW",
     bidCount: "1/1",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 29,
@@ -366,6 +396,8 @@ export const useritems = [
     price: "0.13 ETH",
     bidCount: "1/1",
     type: "owned",
+
+    liked: false,
   },
   {
     id: 30,
@@ -378,6 +410,7 @@ export const useritems = [
     price: "0.13 ETH",
     bidCount: "1/1",
     type: "created",
+    liked: false,
   },
   {
     id: 31,
@@ -389,6 +422,7 @@ export const useritems = [
     price: "From 5 FLOW",
     bidCount: "1/1",
     type: "created",
+    liked: false,
   },
   {
     id: 32,
@@ -400,6 +434,7 @@ export const useritems = [
     price: "10 ETH",
     bidCount: "2/3",
     type: "created",
+    liked: false,
   },
   {
     id: 33,
@@ -411,6 +446,7 @@ export const useritems = [
     price: "0.16111 ETH",
     bidCount: "1/111",
     type: "created",
+    liked: false,
   },
   {
     id: 34,
@@ -424,6 +460,7 @@ export const useritems = [
     price: "0.8 ETH",
     bidCount: "1/1",
     type: "created",
+    liked: false,
   },
   {
     id: 35,
@@ -435,6 +472,7 @@ export const useritems = [
     price: "0.078 ETH",
     bidCount: "1/3",
     type: "created",
+    liked: false,
   },
   {
     id: 36,
@@ -446,6 +484,7 @@ export const useritems = [
     price: "8.49 ETH",
     bidCount: "2/8",
     type: "created",
+    liked: false,
   },
   {
     id: 37,
@@ -457,6 +496,7 @@ export const useritems = [
     price: "5.9 ETH",
     bidCount: "1/7",
     type: "created",
+    liked: false,
   },
 ];
 
