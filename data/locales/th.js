@@ -185,6 +185,11 @@ export const th = {
     },
   },
   network: {
+    numbers: {
+      value: "มูลค่ารวมที่ถูกล็อค",
+      count: "จำนวนธุรกรรม",
+      batches: "แบทช์ตัดสินไปที่ L1"
+    },
     ranking: {
       ranking: "อันดับ",
       table: {

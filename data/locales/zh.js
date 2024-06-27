@@ -182,15 +182,20 @@ export const zh = {
     },
   },
   network: {
-    ranking: {
-      ranking: "排名",
-      table: {
-        collection: "收藏",
-        volume: "音量",
-        floor: "底价",
-        owner: "所有者",
-        items: "项目",
+    numbers: {
+        value: "锁定总价值",
+        count: "交易数量",
+        batches: "批次结算至L1"
       },
+    ranking: {
+        ranking: "排名",
+        table: {
+            collection: "收藏",
+            volume: "音量",
+            floor: "底价",
+            owner: "所有者",
+            items: "项目",
+        },
     },
-  },
+  }
 };
