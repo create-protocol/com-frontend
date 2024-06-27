@@ -181,6 +181,11 @@ export const ja = {
     },
   },
   network: {
+    numbers: {
+      value: "合計値がロックされています",
+      count: "トランザクション数",
+      batches: "バッチは L1 に落ち着きます"
+    },
     ranking: {
       ranking: "ランキング",
       table: {

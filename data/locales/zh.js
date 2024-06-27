@@ -181,6 +181,11 @@ export const zh = {
         },
     },
     network: {
+        numbers: {
+            value: "锁定总价值",
+            count: "交易数量",
+            batches: "批次结算至L1"
+          },
         ranking: {
             ranking: "排名",
             table: {

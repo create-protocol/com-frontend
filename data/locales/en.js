@@ -182,6 +182,11 @@ export const en = {
     },
   },
   network: {
+    numbers: {
+      value: "Total value locked",
+      count: "Transaction count",
+      batches: "Batches settled to L1"
+    },
     ranking: {
       ranking: "Rankings",
       table: {
