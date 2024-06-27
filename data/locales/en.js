@@ -137,6 +137,10 @@ export const en = {
       all: "All",
       art: "Art",
       com: "COMs",
+      music: "Music",
+      fashion: "Fashion",
+      gaming: "Gaming",
+      film: "Film",
     },
     by: "by",
     item: {
@@ -182,6 +186,11 @@ export const en = {
     },
   },
   network: {
+    numbers: {
+      value: "Total value locked",
+      count: "Transaction count",
+      batches: "Batches settled to L1"
+    },
     ranking: {
       ranking: "Rankings",
       table: {
