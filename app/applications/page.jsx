@@ -8,6 +8,7 @@ import Benefits from "@/components/home-10/Benefits";
 // import Testimonials from "@/components/common/Testimonials";
 // import Cta from "@/components/common/Cta";
 import Help from "@/components/home-10/Help";
+import Apps from "@/components/home-10/Apps";
 
 export const metadata = {
   title: "Apps",
@@ -17,14 +18,15 @@ export default function HomePage10() {
     <>
       <Header1 />
       <main>
-        <Hero />
-        <Features />
-        <Promo />
+        {/* <Hero /> */}
+        {/* <Features /> */}
+        {/* <Promo /> */}
         {/*<Partners />*/}
-        <Benefits />
+        {/* <Benefits /> */}
         {/*<Testimonials />*/}
         {/*<Cta />*/}
-        <Help />
+        {/* <Help /> */}
+        <Apps />
       </main>
       <Footer1 />
     </>

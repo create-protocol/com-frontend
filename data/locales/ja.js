@@ -186,9 +186,9 @@ export const ja = {
   },
   network: {
     numbers: {
-      value: "合計値がロックされています",
-      count: "トランザクション数",
-      batches: "バッチは L1 に落ち着きます"
+      value: "発生するプロトコル料金の合計",
+      count: "COMの合計値",
+      batches: "COMのトランザクション量"
     },
     ranking: {
       ranking: "ランキング",
@@ -201,4 +201,16 @@ export const ja = {
       },
     },
   },
+  app: {
+    title: "アプリを探索する",
+    category: {
+      all: "全て",
+      community: "コミュニティ",
+      defi: "DeFi",
+      gaming: "ゲーム",
+      infra: "インフラ",
+      nft: "NFT",
+      social: "社交"
+    }
+  }
 };
