@@ -183,9 +183,9 @@ export const zh = {
   },
   network: {
     numbers: {
-        value: "锁定总价值",
-        count: "交易数量",
-        batches: "批次结算至L1"
+        value: "產生的總協議費用",
+        count: "COM 總價值",
+        batches: "COM 交易量"
       },
     ranking: {
         ranking: "排名",
@@ -197,5 +197,17 @@ export const zh = {
             items: "项目",
         },
     },
+  },
+  app: {
+    title: "探索應用程式",
+    category: {
+      all: "全部",
+      community: "社群",
+      defi: "去中心化金融",
+      gaming: "賭博",
+      infra: "基礎設施",
+      nft: "NFT",
+      social: "社會的"
+    }
   }
 };

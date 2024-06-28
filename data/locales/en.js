@@ -187,9 +187,9 @@ export const en = {
   },
   network: {
     numbers: {
-      value: "Total value locked",
-      count: "Transaction count",
-      batches: "Batches settled to L1"
+      value: "Total protocol fees generated",
+      count: "Total value of COMs",
+      batches: "COMs transaction volume"
     },
     ranking: {
       ranking: "Rankings",
@@ -201,5 +201,17 @@ export const en = {
         items: "Items",
       },
     },
+  },
+  app: {
+    title: "Explore Apps",
+    category: {
+      all: "All",
+      community: "Community",
+      defi: "DeFi",
+      gaming: "Gaming",
+      infra: "Infra",
+      nft: "NFT",
+      social: "Social"
+    }
   },
 };

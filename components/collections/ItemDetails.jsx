@@ -3,12 +3,30 @@ import Tabs from "./Tabs";
 import { allItems } from "@/data/item";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 // import Timer from "./Timer";
 import { useTranslation } from "react-i18next";
 
 export default function ItemDetails({ id }) {
   const { t } = useTranslation();
+  const [filtered, setFiltered] = useState(allItems)
   const item = allItems.filter((elm) => elm.id == id)[0] || allItems[0];
+  const indexToReplace = allItems.findIndex((item) => item.id === id);
+
+  const addLike = () => {
+    const items = [...filtered];
+    if (!item.liked) {
+      item.liked = true;
+      // item.likes += 1;
+      items[indexToReplace] = item;
+      setFiltered(items);
+    } else {
+      item.liked = false;
+      // item.likes -= 1;
+      items[indexToReplace] = item;
+      setFiltered(items);
+    }
+  };
 
   const comments = [
     {
@@ -91,7 +109,7 @@ export default function ItemDetails({ id }) {
               {/* Collection / Likes / Actions */}
               <div className="mb-3 flex">
                 {/* Collection */}
-                <div className="flex items-center">
+                <div className="flex relative items-center w-full">
                   <h2
                     // href={`/explore`}
                     className="mr-2 text-sm font-bold text-[#03b56a]"
@@ -180,6 +198,27 @@ export default function ItemDetails({ id }) {
                   {/*    </button>*/}
                   {/*  </div>*/}
                   {/*</div>*/}
+                  <div className="absolute top-0 right-0 flex items-center space-x-1 rounded-md bg-white p-2 dark:bg-jacarta-700">
+                    <span
+                      onClick={() => addLike()}
+                      className={`js-likes relative cursor-pointer before:absolute before:h-5 before:w-5 before:bg-[url('../img/heart-fill.svg')] before:bg-cover before:bg-center before:bg-no-repeat before:opacity-0 ${
+                        item.liked ? "js-likes--active" : ""
+                      }`}
+                      data-tippy-content="Favorite"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 22 22"
+                        className="h-5 w-5 fill-jacarta-700  hover:fill-red dark:fill-jacarta-200 dark:bg-jacarta-700 dark:hover:fill-red"
+                      >
+                        <path fill="none" d="M0 0H24V24H0z" />
+                        <path d="M12.001 4.529c2.349-2.109 5.979-2.039 8.242.228 2.262 2.268 2.34 5.88.236 8.236l-8.48 8.492-8.478-8.492c-2.104-2.356-2.025-5.974.236-8.236 2.265-2.264 5.888-2.34 8.244-.228zm6.826 1.641c-1.5-1.502-3.92-1.563-5.49-.153l-1.335 1.198-1.336-1.197c-1.575-1.412-3.99-1.35-5.494.154-1.49 1.49-1.565 3.875-.192 5.451L12 18.654l7.02-7.03c1.374-1.577 1.299-3.959-.193-5.454z" />
+                      </svg>
+                    </span>
+                    {/* <span className="text-sm dark:text-jacarta-200">
+                                {elm.likes}
+                              </span> */}
+                  </div>
                 </div>
               </div>
 

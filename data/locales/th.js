@@ -186,9 +186,9 @@ export const th = {
   },
   network: {
     numbers: {
-      value: "มูลค่ารวมที่ถูกล็อค",
-      count: "จำนวนธุรกรรม",
-      batches: "แบทช์ตัดสินไปที่ L1"
+      value: "ค่าธรรมเนียมโปรโตคอลทั้งหมดที่สร้างขึ้น",
+      count: "มูลค่ารวมของ COM",
+      batches: "ปริมาณธุรกรรม COM"
     },
     ranking: {
       ranking: "อันดับ",
@@ -199,6 +199,18 @@ export const th = {
         owner: "เจ้าของ",
         items: "รายการ",
       },
+    },
+  },
+  app: {
+    title: "สำรวจแอพ",
+    category: {
+      all: "ทั้งหมด",
+      community: "ชุมชน",
+      defi: "เดไฟ",
+      gaming: "การเล่นเกม",
+      infra: "อินฟราเรด",
+      nft: "เอ็นเอฟที",
+      social: "ทางสังคม"
     },
   },
 };
