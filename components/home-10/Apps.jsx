@@ -107,24 +107,24 @@ const Apps = () => {
           {filtered.map((elm, i) => (
             <article key={i}>
               <div className="relative rounded-2.5xl border border-jacarta-100 bg-white p-[2rem] transition-shadow hover:shadow-lg dark:text-white dark:border-[#4A4A4A] dark:bg-[#4A4A4A]">
-                <div className="w-full h-full flex justify-between items-center">
-                  <div className="flex h-full gap-6 items-start">
+                <div className="w-full h-full flex justify-between items-center flex-col md:flex-row">
+                  <div className="flex flex-col md:flex-row h-full gap-6 items-start">
                     <img
                       src={elm.avatar}
                       alt="item 1"
-                      className="h-28 w-28 bg-white rounded-[0.625rem] object-cover"
+                      className="md:h-28 md:w-28 bg-white rounded-[0.625rem] object-cover"
                     />
-                    <div className="w-2/3 flex flex-col gap-2">
-                      <span className="flex items-center gap-2">
+                    <div className="md:w-2/3 flex flex-col gap-2">
+                      <span className="flex items-center md:gap-2 justify-between">
                         <p className="text-2xl font-semibold">{elm.name}</p>
                         <p className="bg-[#156041] text-xs text-white px-2 py-1 rounded-3xl">
                           {elm.category}
                         </p>
                       </span>
-                      <p>{elm.description}</p>
+                      <p className="w-full">{elm.description}</p>
                     </div>
                   </div>
-                  <button class="cursor-pointer font-semibold overflow-hidden relative z-100 border border-green group px-8 py-1 rounded-lg">
+                  <button class="md:mt-0 mt-10 md:w-fit w-3/4 cursor-pointer font-semibold overflow-hidden relative z-100 border border-green group px-8 py-1 rounded-lg flex items-center justify-center">
                     <span class="relative z-10 text-green group-hover:text-white text-xl duration-500">
                       Visit
                     </span>
